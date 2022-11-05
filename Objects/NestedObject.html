@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          var person2 ={
+            myname:"Mohan",
+            email:"Kolluru",
+            number:918203773 
+        };
+        person2['person3']={
+            myname:"Mohan2",
+            email:"Kolluru",
+            number:918203775
+        };
+         person2.person4={
+            myname:"Raju",
+            email:"Kolluru",
+            number:918203775
+        };
+        console.log(person2)
+        console.log(person2.person3)
+        console.log(person2.person4)
+        for(a in person2){
+            
+          document.write(a +":"+person2[a]+"<br>")
+        }
+        for(b in person2.person3){
+            
+            document.write(b +":"+ person2.person3[b]+"<br>")
+          }
+          for(c in person2.person4){
+            
+            document.write(c +":"+person2.person4[c]+"<br>")
+          }
+    </script>
+    
+</body>
+</html>
