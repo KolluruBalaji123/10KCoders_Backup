@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //literal way
+        var  Emp={
+            Empname:"Balu",
+            Empnumber:00550,
+            Empsal :function(){
+                console.log(this.Empname,+" "+ this.Empnumber)      
+        }
+        }
+        console.log(Emp)
+        //Built in Way Object Creating
+        var Emp2= new Object({Empname:"Balaji",Empnumber:005550})
+        console.log(Emp2)
+        //Constructor cReating Object
+        function Emp3(Empname,Empdesignation, Empumber,Empskills){
+            this.Empname=Empname;
+           this.Empdesignation=Empdesignation
+            this.Empnumber=Empumber;
+            this.Empskills=Empskills;
+        }
+        var Obj=new Emp3("Baljikolluru","AssociateConsultant",005550,"Seleniumjava")
+        console.log(Obj)
+        //class cREating Object
+        class Emp4{
+            constructor( Empname, Empnumber){
+                this.Empname=Empname;
+                this.Empnumber=Empnumber;
+            }    
+        }
+        var  Emp5=new Emp4("Balaji",00555)
+        console.log(Emp5)
+
+
+    </script>
+    
+</body>
+</html>

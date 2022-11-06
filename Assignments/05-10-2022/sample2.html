@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //literal way
+        var  Car={
+            carname:"Audi",
+            colour:"Black",
+            carprice :function(){
+                console.log(this.carname,+" "+ this.colour)      
+        }
+        }
+        console.log(Car)
+        //Built in Way Object Creating
+        var car2= new Object({carname:"Mercy",carcolor:"Blue"})
+        console.log(car2)
+        //Constructor cReating Object
+        function Car3(carname,carcolor, carnumber,carcondition){
+            this.carname=carname;
+           this.carcolor=carcolor
+            this.carnumber=carnumber;
+            this.carcondition=carcondition
+        }
+        var Obj=new Car3("Benz","Darkblue",1234,"Good")
+        console.log(Obj)
+        //class cREating Object
+        class car4{
+            constructor( carname, carcolor){
+                this.carname=carname;
+                this.carcolor=carcolor;
+            }    
+        }
+        var  car5=new car4("shift","Maroon")
+        console.log(car5)
+
+
+    </script>
+    
+</body>
+</html>

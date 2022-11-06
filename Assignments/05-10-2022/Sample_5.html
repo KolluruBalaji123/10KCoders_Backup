@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //literal way
+        var Cricket={
+          Playername:"Balu",
+           Playerjersy:18,
+          Playsal:function(){
+              console.log(this.Playername,+" "+ this.Playerjersy)      
+      }
+      }
+      for(a in Cricket){
+        if(a!=="Playsal"){
+           document.write(a+":"+Cricket[a]+"<br>")
+        }
+
+      }
+      //Built in Way Object Creating
+      var Player2= new Object({Playername:"Balaji",Playerjersy:7})
+      for(a in Player2){
+        document.write(a+" :"+Player2[a]+"<br>")
+
+      }
+     
+     
+      //Constructor cReating Object
+      function Player3(playername,playerjersy, playerstyle,playerruns){
+          this.playername=playername;
+         this.playerjersy=playerjersy;
+          this.playerstyle=playerstyle;
+          this.playerruns=playerruns;
+      }
+      var Obj=new Player3("Baljikolluru",3,"left-hand",999)
+    for (b in Obj){
+        document.write(b+":"+Obj[b]+"<br>")
+    }
+      //class cREating Object
+      class Player4{
+          constructor( playername, jersynumber){
+              this.Playername=playername;
+              this.Jersynumber=jersynumber;
+          }    
+      }
+      var  Output=new Player4("Nikhil",05)
+     for(c in Output){
+        document.write(c+":"+Output[c]+"<br>")
+     }
+
+
+
+  </script>
+  
+
+    
+</body>
+</html>

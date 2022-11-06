@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //literal way syntax
+             var person1={
+               }
+               console.log(person1)
+               //Second OOP way creating Object
+               var person2 =new Object({fname:"Balaji",lname:"Kolluru"})
+               console.log(person2)
+               //creating Object  with Constructor Function
+            function Person3 ( email,phone, address, city){
+            this.email=email;
+            this.phone=phone
+            this.address=address;
+            this.city=city;
+               }
+              var person4= new  Person3("kolluru@gmail.com",9182037594,"1-128 kolluru","Kolluru")
+              var person5= new  Person3("kolluru@gmail.com",9182037594,"1-53 kolluru"," Guntur")
+              console.log(person4)
+               console.log(person5)
+      //Class creating Object               
+     class Person6{
+        constructor(fname, lname)
+        {
+            this.fname=fname;
+            this.lname=lname;
+
+        }
+    }
+    var person7=new Person6("Blajai ", "Kolluru")
+    var person8=new Person6("Ballaya", "Kolluru")
+    console.log(person7);
+    console.log(person8)
+    
+
+
+
+            </script>
+            
+    
+</body>
+</html>

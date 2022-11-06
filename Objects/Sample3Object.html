@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var person ={
+            fname:"Balaji",
+            lname:"Kolluru",
+            tel:"9182037594",
+            address:"1-1123 near kolluru",
+            city:"guntur",
+            state:"AP",
+            zip:"522324",
+            fullname: function(){
+                console.log( this.fname+" "+this.lname)
+            }
+        };
+        for(a in person){
+            if(a!=="fullname" && a!=="tel"&& a!=="city"){
+                document.write(a +":"+person[a]+"<br>")
+
+            }
+           
+        }
+        // person.fullname();
+    </script>
+    
+</body>
+</html>

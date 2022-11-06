@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          //literal way
+          var  Teacher={
+            Techname:"Balu",
+             Technumber:00550,
+            Techsal:function(){
+                console.log(this.Techname,+" "+ this.Technumber)      
+        }
+        }
+        console.log(Teacher)
+        //Built in Way Object Creating
+        var Teacher2= new Object({Empname:"Balaji",Empnumber:005550})
+        console.log(Teacher2)
+        //Constructor cReating Object
+        function Teacher3(Techname,Techdesignation, Techumber,Techskills){
+            this.Techname=Techname;
+           this.Techdesignation=Techdesignation
+            this.Technumber=Techumber;
+            this.Techskills=Techskills;
+        }
+        var Obj=new Teacher3("Baljikolluru","AssociateConsultant",005550,"Seleniumjava")
+        console.log(Obj)
+        //class cREating Object
+        class Teacher4{
+            constructor( Techname, Technumber){
+                this.Techname=Techname;
+                this.Technumber=Technumber;
+            }    
+        }
+        var  Output=new Teacher4("Balaji",00555)
+        console.log(Output)
+
+
+
+    </script>
+    
+</body>
+</html>
