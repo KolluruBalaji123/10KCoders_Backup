@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var players=["Balaji","rahul","kohli","pant","Shami"]
+        players.forEach(function(a,index ,arr){
+            document.write(a+"   "+ "id of the player"+index+ "  "+" part of the team Members---"+arr+"<br>")
+
+        }) 
+        //using Push
+        var players1=["Balaji","rahul","kohli","pant","Shami"]
+        players1.push("Swapna")
+        document.write("this is push method-------------"+"<br>")
+        players1.forEach(function(a,index ,arr){
+            document.write(a+"   "+ "id of the player"+index+ "  "+" part of the team Members---"+arr+"<br>")
+        }) 
+        //Using  Unshift
+           var players2=["Balaji","rahul","kohli","pant","Shami"]
+        players2.unshift("Ntr")
+        document.write("this is unshift method-------------"+"<br>")
+        players2.forEach(function(a,index ,arr){
+            document.write(a+"   "+ "id of the player"+index+ "  "+" part of the team Members---"+arr+"<br>")
+        }) 
+        //splice Method
+        var players3=["Balaji","rahul","kohli","pant","Shami"]
+        players3.splice(1,0,"Kolluru")
+        document.write("this is Splice method-------------"+"<br>")
+        players3.forEach(function(a,index ,arr){
+            document.write(a+"   "+ "id of the player"+index+ "  "+" part of the team Members---"+arr+"<br>")
+        }) 
+        //pop Method
+        var players4=["Balaji","rahul","kohli","pant","Shami"]
+        players4.pop();
+        
+        document.write("this is pop method-------------"+"<br>")
+        players4.forEach(function(a,index ,arr){
+            document.write(a+"   "+ "id of the player"+index+ "  "+" part of the team Members---"+arr+"<br>")
+        }) 
+    // shift Method
+    var players5=["Balaji","rahul","kohli","pant","Shami"]
+       players5.shift();
+        
+        document.write("this shift method-------------"+"<br>")
+        players5.forEach(function(a,index ,arr){
+            document.write(a+"   "+ "id of the player"+index+ "  "+" part of the team Members---"+arr+"<br>")
+        }) 
+        //Sort method
+        var players6=["Balaji","Rahul","Kohli","Pant","Shami"]
+       players6.sort();
+        
+        document.write("this is Sort method-------------"+"<br>")
+        players6.forEach(function(a,index ,arr){
+            document.write(a+"   "+ "id of the player"+index+ "  "+" part of the team Members---"+arr+"<br>")
+        }) 
+        //reverse Method
+        var players7=["Balaji","Rahul","Kohli","Pant","Shami"]
+       players7.reverse();
+        
+        document.write("this is Reverse method-------------"+"<br>")
+        players7.forEach(function(a,index ,arr){
+            document.write(a+"   "+ "id of the player"+index+ "  "+" part of the team Members---"+arr+"<br>")
+        }) 
+      
+
+      
+
+    </script>
+
+</body>
+
+</html>

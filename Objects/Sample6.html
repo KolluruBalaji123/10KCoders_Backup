@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // Difference between literal and oopway
+        var person={
+            fname:"Balaji",
+            lname:"Balu"
+        };
+       
+        var user=person;
+        person.fname="kiran"
+        console.log(person)
+        console.log(user)
+        //Second way Example
+         function MainUser(fname,lname){
+            this.fname=fname;
+            this.lname=lname;
+            this.city="Kolluru";
+            this.state="Ap";
+            this.zip=522324
+         }
+         var user1=new MainUser("Thikka ","Sannasi")
+         var user2=new MainUser("picchu", "sannasi")
+         console.log(user1)
+         console.log(user2)
+    </script>
+    
+</body>
+</html>
