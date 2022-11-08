@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var playerscorecard=[
+            {name:"Warner",
+            runs:25,
+            fours:5,
+            sixes:6,
+            sr:138.89,
+            balllsplayed:18
+
+            },
+
+            {name:"Green",
+            runs:3,
+            fours:0,
+            sixes:0,
+            sr:130,
+            balllsplayed:2
+            },
+
+            {name:"Marsh",
+            runs:45,
+            fours:3,
+            sixes:2,
+            sr:150,
+            balllsplayed:30
+            },
+
+            {name:"Smith",
+            runs:4,
+            fours:1,
+            sixes:0,
+            sr:100,
+            balllsplayed:4
+            },
+
+            {name:"Stoinis",
+            runs:25,
+            fours:0,
+            sixes:2,
+            sr:199,
+            balllsplayed:21
+            },
+
+            {name:"Maxwell",
+            runs:54,
+            fours:6,
+            sixes:2,
+            sr:168.75,
+            balllsplayed:32
+            },
+
+            {name:"Wade(wk)",
+            runs:6,
+            fours:1,
+            sixes:0,
+            sr:75,
+            balllsplayed:8
+            },
+
+            {name:"cummins",
+            runs:0,
+            fours:0,
+            sixes:0,
+            sr:0,
+            balllsplayed:2
+            },
+
+            {name:"richardson",
+            runs:1,
+            fours:0,
+            sixes:0,
+            sr:100,
+            balllsplayed:1
+            },
+            {name:"zampa",
+            runs:1,
+            fours:0,
+            sixes:0,
+            sr:100,
+            balllsplayed:1
+            },
+        ];
+
+
+       
+      
+
+
+
+
+
+        var totalscore=playerscorecard.reduce((a,players)=>{
+            if(a.runs){
+                return a.runs+players.runs
+            }
+            else{
+                return a+players.runs
+            }
+        });
+        var totalfours=playerscorecard.reduce((b,players2)=>{
+            if(b.fours){
+                return b.fours+players2.fours
+            }
+            else{
+                return b+players2.fours
+            }
+        });
+
+
+        var totalsixes=playerscorecard.reduce((b,players2)=>{
+            if(b.sixes){
+                return b.sixes+players2.sixes
+            }
+            else{
+                return b+players2.sixes
+            }
+        });
+        var above50=playerscorecard.filter((play)=>{
+           return play.runs > 50 ;
+        })
+         var lessthan5=playerscorecard.filter((play)=>{
+            return play.runs < 1 ;
+         })
+         var highsr=playerscorecard.filter((play)=>{
+            return play.sr >= 150;
+         })
+
+         var lowsr=playerscorecard.filter((play)=>{
+            return play.sr <= 50;
+         })
+      
+       
+         
+      
+
+        console.log("Totalscore:"+totalscore);
+        document.write("totalscore:-"+totalscore+"<br>")
+        console.log("Tota:Fours:"+totalfours);
+        document.write("totalfours:-"+totalfours+"<br>")
+        console.log("totalsixes:"+totalsixes);
+        document.write("totalsixes:-"+totalsixes+"<br>")
+        console.log("highscore-",above50);
+        document.write("highscore:" +above50+"<br>")
+        console.log("lowscore-",lessthan5);
+        console.log("high strikeRate:",highsr)
+        console.log("low sr:",lowsr)
+    </script>
+
+    
+</body>
+</html>
