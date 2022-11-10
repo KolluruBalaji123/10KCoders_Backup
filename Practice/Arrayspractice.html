@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    var Boys=["homelander","starkight","atrain","kimichi","dolphin"]
+
+     var bigboys=Boys.map(function(boys){//It will add new arrays using the return Keyword
+        return boys+"-America"
+    });
+    bigboys.sort(); 
+    console.log(bigboys); // it will be in alphabetical order 
+
+
+
+    var char6=Boys.find(function(boys){// it will display onnly one word  with first 6 letters
+     return boys.length==6
+
+    });
+    console.log(char6);
+    document.write(Boys)
+
+ 
+   
+   
+    
+   </script>
+    
+</body>
+</html>

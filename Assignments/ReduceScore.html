@@ -11,7 +11,7 @@
         var playerscorecard=[
             {name:"Warner",
             runs:25,
-            fours:5,
+            fours:1,
             sixes:6,
             sr:138.89,
             balllsplayed:18
@@ -46,7 +46,7 @@
             runs:25,
             fours:0,
             sixes:2,
-            sr:199,
+            sr:19,
             balllsplayed:21
             },
 
@@ -113,6 +113,7 @@
             else{
                 return b+players2.fours
             }
+           
         });
 
 
@@ -124,15 +125,56 @@
                 return b+players2.sixes
             }
         });
-        var above50=playerscorecard.filter((play)=>{
-           return play.runs > 50 ;
+
+
+        // var above50=playerscorecard.filter((play)=>{
+        //     return play.runs >50 ;
+        // })
+        var highstrike=playerscorecard[0].sr;
+        playerscorecard.forEach((strikerate,index,playerscorecard)=>{
+            if(index >= 0){
+                if(strikerate.sr > highstrike){
+                    highstrike = strikerate.sr
+                }
+
+            }
+        });
+        document.write("HighStrike:"+highstrike+"<br>")
+      
+
+
+
+      
+        //  var lessthan5=playerscorecard.filter((play)=>{
+        //     return play.runs < 1 ;
+        //  })
+        var highscore=playerscorecard[1].runs
+        playerscorecard.forEach((players,index,arr)=>{
+            if(index >= 1){
+                if(players.runs >highscore){
+                    highscore =players.runs
+                }
+
+
+            }
         })
-         var lessthan5=playerscorecard.filter((play)=>{
-            return play.runs < 1 ;
+        document.write("HighScore:"+highscore+"<br>")
+
+
+        //  var highsr=playerscorecard.filter((play)=>{
+        //     return play.sr >= 150;   
+        //  })
+        var lowscore=playerscorecard[0].runs
+         playerscorecard.forEach((players,index,arr)=>{
+        if(index <= 0){
+            if(players.runs < lowscore){
+                lowscore = players.runs
+            }
+        }
          })
-         var highsr=playerscorecard.filter((play)=>{
-            return play.sr >= 150;
-         })
+         document.write("lowscore:"+lowscore+"<br>")
+
+        
 
          var lowsr=playerscorecard.filter((play)=>{
             return play.sr <= 50;
@@ -149,7 +191,6 @@
         console.log("totalsixes:"+totalsixes);
         document.write("totalsixes:-"+totalsixes+"<br>")
         console.log("highscore-",above50);
-        document.write("highscore:" +above50+"<br>")
         console.log("lowscore-",lessthan5);
         console.log("high strikeRate:",highsr)
         console.log("low sr:",lowsr)

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          var playerscorecard=[
+            {name:"Warner",
+            runs:25,
+            fours:0,
+            sixes:0,
+            sr:123,
+            balllsplayed:18
+
+            },
+
+            {name:"Green",
+            runs:3,
+            fours:0,
+            sixes:0,
+            sr:100,
+            balllsplayed:2
+            },
+
+            {name:"Marsh",
+            runs:45,
+            fours:3,
+            sixes:2,
+            sr:150,
+            balllsplayed:30
+            },
+
+            {name:"Smith",
+            runs:4,
+            fours:1,
+            sixes:0,
+            sr:100,
+            balllsplayed:4
+            },
+
+            {name:"Stoinis",
+            runs:5,
+            fours:0,
+            sixes:2,
+            sr:19,
+            balllsplayed:21
+            },
+
+            {name:"Maxwell",
+            runs:54,
+            fours:6,
+            sixes:2,
+            sr:168.75,
+            balllsplayed:32
+            },
+
+            {name:"Wade(wk)",
+            runs:6,
+            fours:1,
+            sixes:0,
+            sr:75,
+            balllsplayed:8
+            },
+
+            {name:"cummins",
+            runs:0,
+            fours:0,
+            sixes:0,
+            sr:0,
+            balllsplayed:2
+            },
+
+            {name:"richardson",
+            runs:1,
+            fours:0,
+            sixes:0,
+            sr:100,
+            balllsplayed:1
+            },
+            {name:"zampa",
+            runs:1,
+            fours:0,
+            sixes:0,
+            sr:100,
+            balllsplayed:1
+            },
+        ];
+        var totalScore=playerscorecard.reduce((a,b)=>{
+            if(a.runs){
+                return a.runs+b.runs
+            }
+            else{
+                return  a+b.runs
+            }
+        })
+        document.write("total score:"+totalScore+"<br>")
+
+        var totalfours=playerscorecard.reduce((a,b)=>{
+            if(a.fours==0){
+                return a.fours+b.fours
+            }
+            else{
+                return  a+b.fours
+            }
+        })
+        document.write("total fours:"+totalfours+"<br>")
+
+        var totalsixes=playerscorecard.reduce((a,b)=>{
+            if(a.sixes==0){
+                return a.sixes+b.sixes
+            }
+            else{
+                return  a+b.sixes
+            }
+        })
+        document.write("total Sixes:"+totalsixes+"<br>")
+
+       var highscore=playerscorecard.reduce((a,b)=>{
+         if(Object.values(a).length>0){
+            // if(a.runs){
+            return Math.max(a.runs,b.runs)
+        }
+        else{
+            return Math.max(a,b.runs)
+        }
+       });
+     
+
+       var highscore2=playerscorecard.filter((player)=>{
+        return player.runs == highscore;
+       })
+       highscore2.forEach((player)=>{
+        document.write("Highscorer of the game is"+player.name+":"+player.runs+" runs"+"  "+"Ballsplayed:"+player.balllsplayed+"<br>")
+       })
+
+       var lowscore=playerscorecard.reduce((a,b)=>{
+        if(Object.values(a).length>0){
+        return Math.min(a.runs,b.runs)
+        }
+        else{
+            return Math.min(a,b.runs)
+        }
+       })
+       var lowestscore=playerscorecard.filter((player)=>{
+        return player.runs==lowscore
+       })
+      lowestscore.forEach((player)=>{
+        document.write("lowscore the game is:"+player.name+"="+player.runs+" "+" Bllasplayed:"+player.balllsplayed+"<br>")
+      })
+      //Low strike rate
+      var lowstrikerate=playerscorecard.reduce((a,b)=>{
+        if(Object.values(a).length>0){
+            return Math.min(a.sr,b.sr)
+        }
+        else{
+            return Math.min(a,b.sr)
+        }
+      })
+     var lowsr=playerscorecard.filter((player)=>{
+        return player.runs==lowstrikerate
+     })
+
+     lowsr.forEach((player)=>{
+        document.write("Low strike of the game is :"+player.name+"="+player.runs+""+"playerstrikerate:"+player.sr+"<br>")
+     })
+      document.write("scored lowest strike rate:"+lowstrikerate+"<br>")
+      //HighStrike RATE
+      var highstrike=playerscorecard.reduce((a,b)=>{
+        if(Object.values(a).length>0){
+            return Math.max(a.sr,b.sr)
+        }
+        else{
+            return Math.max(a,b.sr)
+        } 
+        
+      })
+      var highsr=playerscorecard.filter((player)=>{
+        return player.sr==highstrike
+      })
+      highsr.forEach((player)=>{
+        document.write("High strike rate of the agme is:"+player.name+"="+player.sr)
+      })
+    
+
+
+
+     
+
+
+    </script>
+    
+</body>
+</html>
