@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+    <h1 id="demo2">Balu</h1>
+    <h1 id="demo3">Kolluru</h1>
+    <h2 id="demo4">Balaji</h2>
+</div>
+
+    
+    <script>
+        //1.to create a html element
+        //2.to read html elments and values
+   //     document.getElementById("demo").innerHTML="😎My name is Balaji😎"
+      //  document.getElementById("demo").innerHTML="My name is Balaj1" when we  give the 2nd id  it is overiding
+     //  document.querySelector("h2").innerHTML="my  name is dawood"//we canm pass element  u in the query selector
+     //  document.querySelector("#demo2").innerHTML="Balaji the great"// we can pass id also in the query selector
+       var allhis=document.getElementsByTagName("h1")
+       allhis[0].innerHTML="balu chages as  Bala";
+       allhis[1].innerHTML="Kolluru changes as Kollur"
+       allhis[2].innerHTML="Balji cahges as Balaj"
+      // allhis[2].innerHTML="New line created"
+       console.log(allhis)
+       
+
+        
+        
+    </script>
+    
+</body>
+</html>

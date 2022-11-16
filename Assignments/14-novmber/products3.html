@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<table border="2px">
+    <thead>
+        <tr>
+            <th colspan="6">adress</th>
+            <th rowspan="3">id</th>
+            <th rowspan="3">email</th>
+            <th rowspan="3">username</th>
+            <th rowspan="3">password</th>
+            <th colspan="2">name</th>
+            <th rowspan="3">phone</th>
+            <th rowspan="3">__v</th>
+          </tr>
+          <tr>
+            <th colspan="2">geolocation</th>
+            <th rowspan="2">city</th>
+            <th rowspan="2">street</th>
+            <th rowspan="2">number</th>
+            <th rowspan="2">zipcode</th>
+            <th rowspan="2">firstname</th>
+            <th rowspan="2">lastname</th>
+          </tr>
+          <tr>
+            <th>lat</th>
+            <th>long</th>
+          </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+<body>
+    <script src="data3.js"></script>
+    <script>
+    adds.forEach((part)=>{
+    var mytr=document.createElement("tr");
+    for( a in part){
+       var mytd=document.createElement("th");
+        if(a !== "address"&& a!=="name"){
+            mytd.innerHTML=part[a]
+            mytr.appendChild(mytd)
+
+        }
+        if(a =="address"){
+            var  obj=part[a];
+            for( b in  obj){
+             var addt=document.createElement("td");
+             if( b !=="geolocation"){
+                addt.innerHTML=obj[b];
+                mytr.appendChild(addt);
+             } else if( b =="geolocation"){
+                for (c in obj[b]){
+                    var geo=document.createElement("td")
+                    geo.innerHTML=obj[b][c]
+                    mytr.appendChild(geo);
+                }
+
+             }
+
+        }
+    } else if(a =="name"){
+        console.log(part[a]);
+        for(b in part[a]){
+            var nametd=document.createElement("td")
+            nametd.innerHTML=part[a][b]
+            mytr.appendChild(nametd)
+
+        }
+
+    }
+}
+    document.querySelector("tbody").appendChild(mytr)
+    });
+    </script>
+    
+</body>
+</html>

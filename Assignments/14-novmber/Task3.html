@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        <thead>
+            <th>fanme</th>
+            <th>Lname</th>
+            <th>Tel</th>
+            <th>address</th>
+            <th>city</th>
+            <th>State</th>
+            <th>Zip</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+    </table>
+    <script>
+        var Dummydata= [
+    {
+        "fname": "Brien",
+        "lname": "Burkhardt",
+        "tel": "(182)039-7708",
+        "address": "560 Massa Dr",
+        "city": "Armada",
+        "state": "KY",
+        "zip": 93980
+    },
+    {
+        "fname": "David",
+        "lname": "Ray",
+        "tel": "(632)495-1338",
+        "address": "3485 Vestibulum Ave",
+        "city": "Carolina Beach",
+        "state": "MN",
+        "zip": 79192
+    },
+    {
+        "fname": "Tamara",
+        "lname": "Jordan",
+        "tel": "(267)920-3121",
+        "address": "385 Consequat Ave",
+        "city": "Hampton",
+        "state": "IN",
+        "zip": 55682
+    },
+    {
+        "fname": "Kamaniee",
+        "lname": "Kavanaugh",
+        "tel": "(874)662-7144",
+        "address": "2006 Eros Rd",
+        "city": "Underwood",
+        "state": "VA",
+        "zip": 10784
+    },
+    {
+        "fname": "Kantanzia",
+        "lname": "Pagnozzi",
+        "tel": "(572)139-7379",
+        "address": "9999 Vestibulum Ave",
+        "city": "Centreville",
+        "state": "AR",
+        "zip": 21183
+    },
+    {
+        "fname": "Petr",
+        "lname": "Hellems",
+        "tel": "(659)589-6187",
+        "address": "291 Donec Ln",
+        "city": "Chesterfield",
+        "state": "MN",
+        "zip": 49151
+    },
+    {
+        "fname": "Hector",
+        "lname": "Ellington",
+        "tel": "(414)774-9604",
+        "address": "798 Elit Ln",
+        "city": "Detroit",
+        "state": "MS",
+        "zip": 77782
+    },
+    {
+        "fname": "Shivkumar",
+        "lname": "Peterson",
+        "tel": "(621)308-7771",
+        "address": "1167 In Dr",
+        "city": "Hazel Park",
+        "state": "WV",
+        "zip": 90163
+    },
+    {
+        "fname": "Donna",
+        "lname": "Schuplin",
+        "tel": "(451)530-8020",
+        "address": "1361 Vestibulum Rd",
+        "city": "Philadelphia",
+        "state": "MN",
+        "zip": 94641
+    },
+    {
+        "fname": "Travis",
+        "lname": "Westrate",
+        "tel": "(845)324-0653",
+        "address": "8301 Etiam St",
+        "city": "Cape Coral",
+        "state": "SD",
+        "zip": 46029
+    }
+]
+Dummydata.forEach((data1)=>{
+    var trow=document.createElement("tr")
+    for(a in data1){
+        var tabdt=document.createElement("td");
+        tabdt.innerHTML=data1[a];
+        trow.appendChild(tabdt)
+    }
+    document.querySelector("tbody").appendChild(trow)
+    
+})
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Balaji={
+            fname:"Balu",
+            lname:"Kolluru",
+            
+        }
+        var naveen ={
+            fname:"nav",
+            lname:"kav",
+           
+        }
+    function  fullname(xyz){
+                console.log(this.fname+""+this.lname+xyz)
+              
+            }
+       fullname.call(Balaji,["balaji","Kolluru","Name"]) //we have the call the object and we can add Arrays Also
+      fullname.call(naveen)
+   
+    </script>
+    <script>
+          var Balaji2={
+            fname:"Balu",
+            lname:"Kolluru",
+            
+        }
+        var Nikhil ={
+            fname:"nav",
+            lname:"kav",
+           
+        }
+    function  fullname(){
+                console.log(this.fname+""+this.lname)
+            }
+             //binding
+    var functionname=fullname.bind(Balaji2)
+      functionname();//we have to store it ina variable and then pass the varaiable
+      var functionname=fullname.bind(Nikhil)
+      functionname();
+
+    </script>
+    <script>
+          var Balaji3={
+            fname:"Balu",
+            lname:"Kolluru",
+            
+        }
+        var Nikhil2 ={
+            fname:"nav",
+            lname:"kav",
+           
+        }
+    function  fullname(...abc){
+                console.log(this.fname+""+this.lname)
+                console.log(abc)
+            }
+            fullname.apply(Balaji3,["Gandhi","Godsay"])
+           
+    </script>
+    
+</body>
+</html>

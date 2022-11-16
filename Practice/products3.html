@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+          <tr>
+            <th colspan="6">adress</th>
+            <th rowspan="3">id</th>
+            <th rowspan="3">email</th>
+            <th rowspan="3">username</th>
+            <th rowspan="3">password</th>
+            <th colspan="2">name</th>
+            <th rowspan="3">phone</th>
+            <th rowspan="3">__v</th>
+          </tr>
+          <tr>
+            <th colspan="2">geolocation</th>
+            <th rowspan="2">city</th>
+            <th rowspan="2">street</th>
+            <th rowspan="2">number</th>
+            <th rowspan="2">zipcode</th>
+            <th rowspan="2">firstname</th>
+            <th rowspan="2">lastname</th>
+          </tr>
+          <tr>
+            <th>lat</th>
+            <th>long</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    <script src="data3.js"></script>
+    <script>
+      adds.forEach((user) => {
+        var mytr = document.createElement("tr");
+        for (i in user) {
+          var mytd = document.createElement("th");
+          if (i !== "address" && i !== "name") {
+            mytd.innerHTML = user[i];
+            mytr.appendChild(mytd);
+          }
+          if (i == "address") {
+            var obj = user[i];
+            for (j in obj) {
+              var addtd = document.createElement("td");
+              if (j !== "geolocation") {
+                addtd.innerHTML = obj[j];
+                mytr.appendChild(addtd);
+              }else if (j == "geolocation") {
+                for (a in obj[j]) {
+                  var geotd = document.createElement("td");
+                  geotd.innerHTML = obj[j][a];
+                  mytr.appendChild(geotd);
+                }
+              }
+            }
+          } else if (i == "name") {
+            console.log(user[i]);
+            for (a in user[i]) {
+              var nametd = document.createElement("td");
+              nametd.innerHTML = user[i][a];
+              mytr.appendChild(nametd);
+            }
+          }
+        }
+        document.querySelector("tbody").appendChild(mytr);
+      });
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <th>firstname</th>
+            <th>lastname</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+    </table>
+    <script>
+        var Mynames=[
+    {
+        "fname": "Jesse",
+        "lname": "Wittek"
+    },
+    {
+        "fname": "Josefina",
+        "lname": "Salter"
+    },
+    {
+        "fname": "Samantha",
+        "lname": "Fournier"
+    },
+    {
+        "fname": "Noby",
+        "lname": "Hoffmann"
+    },
+    {
+        "fname": "Arlyne",
+        "lname": "Comeau"
+    },
+    {
+        "fname": "Clarence",
+        "lname": "Fuller"
+    },
+    {
+        "fname": "Cherylynne",
+        "lname": "Atanasov"
+    },
+    {
+        "fname": "Sukanya",
+        "lname": "Cicero"
+    },
+    {
+        "fname": "Edith",
+        "lname": "Miyaki"
+    },
+    {
+        "fname": "Terrance",
+        "lname": "Gershowitz"
+    }
+]
+Mynames.forEach((user)=>{
+    var trow=document.createElement("tr")
+    
+    for(a in user){
+        var myTdata=document.createElement("td")
+        myTdata.innerHTML=user[a]
+        trow.appendChild(myTdata)
+    }
+    document.querySelector("tbody").appendChild(trow)
+        
+    });
+   
+
+
+
+
+
+
+
+  
+
+
+
+ //LessColumns 
+    // var td1=document.createElement("td")
+    // td1.innerHTML=user.fname
+    // tabledt.appendChild(td1)
+    // var td2=document.createElement("td")
+    // td2.innerHTML=user.lname
+    // tabledt.appendChild(td2)
+    //
+   // Using Object
+    // document.querySelector("tbody").appendChild(trow)
+    // Object.values(user).forEach((ball)=>{ 
+    //     var Mytd=document.createElement("td")
+    //     Mytd.innerHTML=ball;
+    //     trow.appendChild(Mytd)
+    //
+ 
+
+</script>
+
+
+  
+    
+</body>
+</html>

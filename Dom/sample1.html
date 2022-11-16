@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <label for="Firstname">
+            Firstname
+        </label><br>
+        <input type="text" id="fname" placeholder="firstName"><br> 
+        <input type="radio" class="usegender" name="gender" value="male">Male<br>
+        <input type="radio"  class="usegender" name="gender" value="female">Female<br>
+        <input type="radio"  class="usegender" name="gender" value="Other">Other<br>
+        <button onclick="getGender()" type="button">GetGender</button>
+    </form>
+    <script>
+        function getGender(){
+            var allRadios=document.getElementsByName("gender")
+            var allRadioclass=document.getElementsByClassName("usegender")
+            allRadios.forEach((radios)=>{//For Node Collection
+                if(radios.checked){
+                    console.log(radios.value)
+                }
+            })
+            for(i=0;i<allRadioclass.length;i++){//For Html Coillection
+            if(allRadioclass[i].checked){
+                console.log("from html collection:-"+allRadioclass[i].value)
+            }
+           }
+        }
+        //Aceessing  Html; elements
+        //1.which will give single element 
+        //a.Get elementByID
+        //B.QuerSelector
+        //2.Which will give  Multiple elements
+        //a.getElmentByTagName     //it can not be iterated through for each it is html collection for html we should use  ForLoop
+        //b.GetelemntsByname        //it is nodecOllection we can iterate through foreach anfd map 
+        //c.GetElementByclassName    // it can not be iterated through for each it is html collection for html we should use  ForLoop
+        //QuerySelectorAll          ////it is nodecOllection we can iterate through foreach anfd map 
+    
+    </script>
+    <script>
+    
+        
+    </script>
+    
+</body>
+</html>

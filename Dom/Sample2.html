@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <input type="checkbox" class="cousen"  value="java"name="course" id="">Java<br>
+        <input type="checkbox" class="cousen" value="Html" name="course" id="">Html<br>
+        <input type="checkbox"  class="cousen" value="javascript" name="course" id="">JavaScript<br>
+        <input type="checkbox" class="cousen" value="Reactjs" name="course" id="">Reactjs<br>
+        <button onclick="GetCourse()"type="button">GetAll Values</button>
+    </form>
+    <script>
+        function GetCourse(){
+           var Courses=document.getElementsByName("course");
+            var ClassCourses=document.getElementsByClassName("cousen")
+            Courses.forEach((radios)=>{//For Node Collection
+                if(radios.checked){
+                    console.log(radios.value)
+                }
+            })
+            for(i=0;i<ClassCourses.length;i++){
+                if(ClassCourses[i].checked){
+                    console.log(" its is preneting multiple couses:-"+ClassCourses[i].value)
+
+                }
+            }
+        }
+       
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var randomnumber=Math.random()*50000;
+       console.log("randomNumber:"+randomnumber)
+       console.log("RoundNumber:"+Math.round(randomnumber))
+       console.log("lowestnumber:"+Math.floor(randomnumber))
+       console.log("HighestNumber:"+Math.ceil(randomnumber))
+        var randomnumber=[]
+        for(i=0;i<10;i++){
+            var rNumber=Math.round(Math.random()*50000);
+           
+
+            randomnumber.push(rNumber)
+        }
+      console.log(randomnumber)
+      document.write("RandomNumber:"+randomnumber+"<br>")
+    </script>
+    
+</body>
+</html>

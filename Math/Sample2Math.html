@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var randomNumber=[]
+        while (randomNumber.length <=10){
+            var Rnumber=Math.round(Math.random()*9900000)
+            if(String(Rnumber).length == 6){
+                randomNumber.push(Rnumber)
+            }
+        }
+        console.log(randomNumber)
+        document.write(randomNumber+"<br>")
+    </script>
+    <script>
+        var ramNumber=[]
+        for(i=0;ramNumber.length<10;i++){
+            var rnum=Math.round(Math.random()*50000);
+            if(String(rnum).length == 4){
+                ramNumber.push(rnum)
+            }
+           
+            
+        }
+        var minnumber=Math.min(...ramNumber)
+        var maxnumber=Math.max(...ramNumber)
+        document.write(ramNumber+"<br>")
+        document.write("lowestNumber:"+minnumber+"<br>")
+        console.log("LowestNumber:",minnumber)
+        document.write("HighestNumber:"+maxnumber)
+       
+    </script>
+</body>
+</html>
