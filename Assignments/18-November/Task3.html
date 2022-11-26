@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Address</h2>
+            <hr >
+        </div>
+        <form>
+            <label for="">Street:</label>
+            <input type="text" name="street" id="street"><br><br>
+            <label for=""></label>
+            <input type="text" name="ss" id="empty"><br><br>
+            <label for="">city,state</label>
+            <input type="text" name="city" id="city">
+            <input type="text" name="state" id="state"><br><br>
+            <label for="">Zip:</label>
+            <input type="text" name="zip" id="zip"><br><br>
+            <label for="">country:</label>
+            <input type="text" name="country" id="country"><br><br>
+            <button type="button" onclick="getdata()" class="okbtn">ok</button>
+            <button type="button"  class=" cancel" >cancel</button>
+
+        </form>
+ 
+</div>
+<table border="2px">
+    <thead>
+        <tr>
+        <th>street</th>
+        <th>empty</th>
+        <th>city</th>
+        <th>satate</th>
+        <th>zip</th>
+        <th>country</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+<script>
+    function getdata(){
+        var details={
+            street:"",
+           empty :"",
+            city:"",
+            state:"",
+            zip:"",
+            country:""
+        }
+        var mytr=document.createElement("tr");
+        for (a in details){
+          
+            details[a]=document.getElementById(a).value
+            var mytd=document.createElement("td")
+            mytd.innerHTML=details[a]
+            mytr.appendChild(mytd)
+        }
+       document.querySelector("tbody").appendChild(mytr)
+    }
+</script>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>EMAIL</th>
+                <th>USERNAME</th>
+                <th>PASSWORD</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var users = [
+            {
+                "id": 55,
+                "email": "XEfird@lectus.net",
+                "username": "JCharleston",
+                "password": "2qVls"
+            },
+            {
+                "id": 56,
+                "email": "BWhite@donec.com",
+                "username": "AKrebs",
+                "password": "xWX7P"
+            },
+            {
+                "id": 57,
+                "email": "SRote@aenean.com",
+                "username": "ABruce",
+                "password": "FLsRJ"
+            },
+            {
+                "id": 58,
+                "email": "DBalulis@dolor.io",
+                "username": "LMcdonough",
+                "password": "WJyFu"
+            },
+            {
+                "id": 59,
+                "email": "SVollrath@etiam.com",
+                "username": "CMichaels",
+                "password": "3Y6Vo"
+            },
+            {
+                "id": 60,
+                "email": "DGreen@dui.gov",
+                "username": "TSnyder",
+                "password": "pMIk1"
+            },
+            {
+                "id": 61,
+                "email": "VDay@donec.ly",
+                "username": "PAhmad",
+                "password": "m77Re"
+            },
+            {
+                "id": 62,
+                "email": "DKish@vitae.gov",
+                "username": "LDiramio",
+                "password": "l5lvu"
+            },
+            {
+                "id": 63,
+                "email": "OKatz@etiam.ly",
+                "username": "SMadjid",
+                "password": "NM9iV"
+            },
+            {
+                "id": 64,
+                "email": "RCurtis@eget.io",
+                "username": "AClinger",
+                "password": "4Yh3X"
+            }
+        ]
+
+       users.forEach((name)=>{
+        var mtr=document.createElement("tr")
+        for(a in name){
+            var mtd=document.createElement("td")
+          mtd.innerHTML=name[a];
+          mtr.appendChild(mtd)
+            
+        }
+        document.querySelector("tbody").appendChild(mtr);
+
+       })
+    </script>
+</body>
+
+</html>

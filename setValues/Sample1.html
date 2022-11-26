@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="fname">FirstName:</label>
+    <input type="text" name="" id="fname">
+    <br>
+    <br>
+    <label for="lname">LastName:</label>
+    <input type="text" name="" id="lname">
+    <br>
+    <br>
+    <button type="button" onclick="setValue()">SetValue</button>
+    <script>
+        function setValue(){
+            var fname="Balaji";
+            var lname="Kolluru"
+            document.getElementById("fname").value=fname
+            document.getElementById("lname").value=lname
+
+        }
+    </script>
+    
+</body>
+</html>

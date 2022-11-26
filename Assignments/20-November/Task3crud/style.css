@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#empty{
+   margin-left: 85px;
+}
+#state{
+    width: 50px;
+}
+#street{
+    margin-left: 45px;
+}
+#city{
+    margin-left: 20px;
+}
+#zip{
+    margin-left: 45px;
+}
+#country{
+    margin-left: 20px;
+}
+.okbtn{
+    width: 3%;
+    margin-left: 20px;
+}
+.cancel{
+    margin: 10px;
+}

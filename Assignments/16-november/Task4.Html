@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="2">
+        <thead>
+            <tr>
+                <th rowspan="2">id</th>
+                <th rowspan="2">title</th>
+                <th rowspan="2">price</th>
+                <th rowspan="2">description</th>
+                <th rowspan="2">Category</th>
+                <th rowspan="2">Image</th>
+                <th colspan="2" rowspan="1"> Rating</th>
+                <th rowspan="2">Edit</th>
+                <th rowspan="2">Delete</th>
+            </tr>
+            <tr>
+                <th>Rate</th>
+                <th>Count</th>
+            </tr>
+
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script src="./data.js"></script>
+    <script>
+        var FilterProducts=[];
+        function displayProducts(products) {
+            document.querySelector("tbody").innerHTML="";
+            products.forEach((product,i) => {
+                console.log(products)
+                var trow = document.createElement("tr")
+                for (a in product) {
+                    var tabdt = document.createElement("td")
+                    if (a !== "image" && a !== "rating") {
+                        tabdt.innerHTML = product[a]
+                        trow.appendChild(tabdt)
+                    }
+                    else if (a == "image") {
+                        //thsi will be execute only for images
+                        var myImage = document.createElement("img");
+                        myImage.setAttribute("src", product[a])
+                        myImage.style.width = "100px";
+
+                        tabdt.appendChild(myImage);
+                        trow.appendChild(tabdt)
+
+                    }
+                    else if (a == "rating") {
+                        for (b in product[a]) {
+                            var tabdt = document.createElement("td")
+                            tabdt.innerHTML = product[a][b]
+                            trow.appendChild(tabdt)
+                        }
+                    }
+
+                }
+                var editTd = document.createElement("td")
+                var editbtn = document.createElement("button");
+                editbtn.innerHTML = "Edit"
+                editTd.appendChild(editbtn)
+                trow.appendChild(editTd)
+
+                var Deltd = document.createElement("td")
+                var Delbtn = document.createElement("button");
+             Delbtn.setAttribute("OnClick", "Deleteproducts(" + i + ")")
+                Delbtn.innerHTML = "Delete"
+                Deltd.appendChild(Delbtn)
+                trow.appendChild(Deltd)
+                document.querySelector("tbody").appendChild(trow)
+            })
+
+        }
+        function Deleteproducts(i){
+            if( FilterProducts.length == 0) {
+                FilterProducts= products.filter((user,index)=>{
+                    return user.id !== products[i].id;
+                });
+           
+
+            } else {
+                FilterProducts =  FilterProducts.filter((user,index)=>{
+                    return user.id !==  FilterProducts[i].id;
+                });
+               
+           
+            }
+                
+          displayProducts(FilterProducts)
+        }
+     displayProducts(products)
+
+       
+     
+
+    </script>
+
+</body>
+
+</html>

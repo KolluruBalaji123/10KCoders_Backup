@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="subjects">Subjects</label><br>
+        <input type="checkbox" name="subject" value="css">HTML<br>
+        <input type="checkbox" name="subject"  value="html">CSS<br>
+        <input type="checkbox" name="subject"  value="js">JS<br>
+        <input type="checkbox" name="subject"  value="reactjs">ReactJs<br>
+        <button type="button" onclick="setSubjectvalues()">Set Values</button>
+    </form>
+    <script>
+        function setSubjectvalues(){
+           var allcheckboxes =document.getElementsByName("subject")
+            var mysubjects=["html","js"]
+            allcheckboxes.forEach((ele)=>{
+              var check=   mysubjects.find((val)=>{
+                    return val == ele.value;           
+                });
+                
+                if(check){
+                    ele.checked=true
+                }
+                
+            });
+            console.log(allcheckboxes)
+        }
+    </script>
+    
+</body>
+</html>

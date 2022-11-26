@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <fieldset>
+        <legend>Registration Details</legend>
+        <label for="">University: </label>
+        <input type="text" name="university" id="university"><br><br>
+
+        <label for="">Institute: </label>
+        <input type="text" name="Institute" id="institute"><br><br>
+
+        <label for="" class="branch">Branch </label>
+        <select name="Degree" id="brench">
+            <option name="Degree" value="select">select</option>
+            <option name="Degree" value="cse" selected>CSE</option>
+            <option name="Degree" value="Ece">ECE</option>
+            <option name="Degree" value="mech">Mech</option>
+            <option name="Degree" value="civil">Civil</option>
+        </select>
+        <br>
+        <br>
+        <label for="">Degree:</label>
+        <select name="Degree" id="degree">
+            <option name="Degree" value="Btech" name>B.Tech</option>
+            <option name="Degree" value="M.tech">Mtech</option>
+            <option name="Degree" value="MBA">MBA</option>
+            <option name="Degree" value="other">Other</option>
+        </select>
+        <input type="radio" name="status" value="pursuing">Pursuing
+        <input type="radio" name="status" value="complted">Completed <br>
+        <br>
+        <label for="">AverageCPI:</label>
+        <input type="number" min="1" max="20" style="width: 50px;" id="avg">
+        <label for="">Upto</label>
+        <input type="number" min="1" max="20" style="width: 50px;" id="avg2"> thSemestr
+        <br>
+        <br>
+        <label for="">Experience</label>
+        <input type="number" min="1" max="20" style="width: 50px;" id="exp"> Years
+        <br><br>
+        <label for=""> your Website OrBlog</label>
+        <input type="text" id="blog" name="Blog">
+    </fieldset>
+    <button type="button" onclick="Getregister()"> step2</button>
+    <script>
+        function Getregister() {
+            var details = {
+                university: "",
+                institute: "",
+                brench:"",
+                degree:"",
+                status: "",
+                avg: "",
+                avg2: "",
+                exp: "",
+                blog: ""
+
+
+            }
+            for (a in details) {
+                if ( a !== "status") {
+                    details[a] = document.getElementById(a).value
+                }
+
+             else if (a == "status") {
+                    var status = document.getElementsByName("status")
+                    status.forEach((e) => {
+                        if (e.checked == true) {
+                            details.status = e.value;
+                        }
+
+                    })
+                }
+
+            }
+
+            console.log("Details", details)
+
+        }
+
+    </script>
+
+</body>
+
+</html>

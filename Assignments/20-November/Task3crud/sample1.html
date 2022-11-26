@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #updateBtn{
+            display: none;
+        }
+    </style>
+</head>
+<body>  
+     <div class="container">
+    <div class="header">
+        <h2>Address</h2>
+        <hr >
+    </div>
+    <form>
+        <label for="street">Street:</label>
+        <input type="text" name="street" id="street"><br><br>
+        <label for="empty"></label>
+        <input type="text" name="ss" id="empty"><br><br>
+        <label for="city">city,state</label>
+        <input type="text" name="city" id="city">
+        <input type="text" name="state" id="state"><br><br>
+        <label for="zip">Zip:</label>
+        <input type="text" name="zip" id="zip"><br><br>
+        <label for="country">country:</label>
+        <input type="text" name="country" id="country"><br><br>
+        <button type="button" onclick="addAddress()" class="okbtn" id="AddressBtn">ok</button>
+        <button type="button" onclick="updateAddress()" id="updateBtn">Update</button>
+
+    </form>
+
+</div>
+<table border="2px">
+<thead>
+    <tr>
+    <th>street</th>
+    <th>Address2</th>
+    <th>city</th>
+    <th>satate</th>
+    <th>zip</th>
+    <th>country</th>
+    <th>Edit</th>
+    <th>Delete</th>
+</tr>
+</thead>
+<tbody>
+
+</tbody>
+</table>
+<script src="./create.js"></script>
+<script src="./delete.js"></script>
+<script src="./edit.js"></script>
+<script src="./readval.js"></script>
+
+    
+</body>
+</html>

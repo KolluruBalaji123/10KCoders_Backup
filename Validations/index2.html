@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <label for="fname">FirstName:</label>
+        <input type="text" name="" id="fname" onkeyup="validateForm()"><br>
+        <label for="lname">LastName:</label>
+        <input type="text" name="" id="lname" onkeyup="validateForm()"><br>
+        <button disabled>AddUser</button>
+    </form>
+    <script>
+        function validateForm(){
+            var username={
+                fname:"",
+                lname:""
+            }
+            for(a in username){
+              username[a]=  document.getElementById(a).value
+            }
+          //  console.log(username);
+          var check=true
+          if(username.fname.length<6 ||username.lname.length<3){
+            check=false
+          }
+          console.log(check)
+          if(check){
+            document.querySelector("button").removeAttribute("disabled")
+          }else{
+            document.querySelector("button").setAttribute("disabled",true)
+
+          }
+
+        } 
+
+    </script>
+    
+</body>
+</html>

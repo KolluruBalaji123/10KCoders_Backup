@@ -1,78 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <table border="1">
-        <thead>
-          <tr>
-            <th colspan="6">adress</th>
-            <th rowspan="3">id</th>
-            <th rowspan="3">email</th>
-            <th rowspan="3">username</th>
-            <th rowspan="3">password</th>
-            <th colspan="2">name</th>
-            <th rowspan="3">phone</th>
-            <th rowspan="3">__v</th>
-          </tr>
-          <tr>
-            <th colspan="2">geolocation</th>
-            <th rowspan="2">city</th>
-            <th rowspan="2">street</th>
-            <th rowspan="2">number</th>
-            <th rowspan="2">zipcode</th>
-            <th rowspan="2">firstname</th>
-            <th rowspan="2">lastname</th>
-          </tr>
-          <tr>
-            <th>lat</th>
-            <th>long</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    <script src="data3.js"></script>
+      <thead>
+        <tr>
+          <th colspan="5">Address</th>
+          <th rowspan="2">ID</th>
+          <th rowspan="2">Email</th>
+          <th rowspan="2">Username</th>
+          <th rowspan="2">Password</th>
+          <th rowspan="1" colspan="2">Name</th>
+          <th rowspan="2">Phone</th>
+          <th rowspan="2">EDIT</th>
+          <th rowspan="2">DELETE</th>
+        </tr>
+        <tr>
+          <th>Geoloation</th>
+          <th>City</th>
+          <th>Street</th>
+          <th>Number</th>
+          <th>Zip Code</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="./data.js"></script>
     <script>
-      adds.forEach((user) => {
-        var mytr = document.createElement("tr");
-        for (i in user) {
-          var mytd = document.createElement("th");
-          if (i !== "address" && i !== "name") {
-            mytd.innerHTML = user[i];
-            mytr.appendChild(mytd);
-          }
-          if (i == "address") {
-            var obj = user[i];
-            for (j in obj) {
-              var addtd = document.createElement("td");
-              if (j !== "geolocation") {
-                addtd.innerHTML = obj[j];
-                mytr.appendChild(addtd);
-              }else if (j == "geolocation") {
-                for (a in obj[j]) {
-                  var geotd = document.createElement("td");
-                  geotd.innerHTML = obj[j][a];
-                  mytr.appendChild(geotd);
+      // console.log(users)
+      // for(a in users[0].address){
+      //     console.log(a)
+      // }
+      var fillteredUsers = [];
+      function displayUsers(users) {
+        document.querySelector("tbody").innerHTML = "";
+        users.forEach((user, i) => {
+          var myTr = document.createElement("tr");
+          for (a in user) {
+            if (a == "address") {
+              // Handling Address Object
+              var addressObj = user[a];
+
+              for (b in addressObj) {
+                var myTd = document.createElement("td");
+                if (b !== "geolocation") {
+                  myTd.innerHTML = addressObj[b];
+                  myTr.appendChild(myTd);
+                } else {
+                  var results = "";
+                  for (c in addressObj[b]) {
+                    results += c + " : " + addressObj[b][c] + "<br>";
+                  }
+                  myTd.innerHTML = results;
+                  myTr.appendChild(myTd);
                 }
               }
-            }
-          } else if (i == "name") {
-            console.log(user[i]);
-            for (a in user[i]) {
-              var nametd = document.createElement("td");
-              nametd.innerHTML = user[i][a];
-              mytr.appendChild(nametd);
+            } else if (a == "name") {
+              for (n in user[a]) {
+                var myTd = document.createElement("td");
+                myTd.innerHTML = user[a][n];
+                myTr.appendChild(myTd);
+              }
+            } else if (a !== "__v") {
+              var myTd = document.createElement("td");
+              myTd.innerHTML = user[a];
+              myTr.appendChild(myTd);
             }
           }
-        }
-        document.querySelector("tbody").appendChild(mytr);
-      });
 
+          var editTd = document.createElement("td");
+          var editBtn = document.createElement("button");
+          editBtn.innerHTML = "EDIT";
+          editTd.appendChild(editBtn);
+          myTr.appendChild(editTd);
+
+          var deleteTd = document.createElement("td");
+          var deleteBtn = document.createElement("button");
+          deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")");
+          deleteBtn.innerHTML = "DELETE";
+          deleteTd.appendChild(deleteBtn);
+          myTr.appendChild(deleteTd);
+
+          document.querySelector("tbody").appendChild(myTr);
+        });
+      }
+      function deleteUser(i) {
+        if (fillteredUsers.length == 0) {
+          fillteredUsers = users.filter((user, index) => {
+            return user.id !== users[i].id;
+          });
+        } else {
+          fillteredUsers = fillteredUsers.filter((user, index) => {
+            return user.id !== fillteredUsers[i].id;
+          });
+        }
+
+        displayUsers(fillteredUsers);
+      }
+
+      displayUsers(users);
+      function editUser() {}
     </script>
-    
-</body>
+  </body>
 </html>

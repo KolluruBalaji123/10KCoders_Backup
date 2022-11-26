@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function showNumber(){
+            //var will be available untill the function exits
+            //Var is a functional Scope
+            //var is redeclared
+            for( var i=0;i<10;i++){
+                console.log(i+"<br>")
+            }
+            console.log("After loop Function I value is :",i)
+
+        }
+        showNumber();
+    </script>
+        <script>
+            //Let 
+            function showNumber2(){
+                //let is block scoped
+                //let cannot be redeclared 
+                //it will be avaible only for loop
+               // reassignment is poassible
+                for( let i=0;i<10;i++){
+                    console.log("let",i+"<br>")
+                }
+                console.log("After loop Function I value is :",i)
+               
+            }
+            showNumber2();
+        </script>
+          <script>
+            //const 
+            function showNumber3(){
+                //const is used for  sinle value and single time
+                //and it is cannot be redeclared
+                //it cannot be reassigned 
+                // for( const i=1;i<10;i++){
+                //     console.log("const",i+"<br>")
+                // }
+                // console.log("After loop Function I value is :",i)
+                const myname="Balaji"
+                myname="Govindhaa"
+                console.log(myname)
+    
+            }
+            showNumber3();
+        </script>
+    
+</body>
+</html>

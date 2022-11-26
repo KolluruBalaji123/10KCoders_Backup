@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //using call back function here
+        var myData=new Promise((resolve,reject)=>{
+          //  resolve();
+            reject();
+        });
+        myData.then(()=>{
+            console.log("Hey it is resolved ...thaks")
+        }).catch(()=>{
+            console.log("it is failed... so sad")
+        })
+    </script>
+    
+</body>
+</html>

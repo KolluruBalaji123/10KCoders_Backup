@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var data=[];
+        function getdatafromserver(){
+            var getdata= new XMLHttpRequest()
+            getdata.onreadystatechange=function(){
+                if(getdata.readyState==4 && getdata.status == 200){
+                    data=JSON.parse(getdata.response)
+                    console.log("get data from the servers1st functiom",data)
+                    displayLastName();
+                }
+            }
+            var  urldata="http://filltext.com/?rows=10&id={index}&email={email}&username={username}&password={randomString|5}&pretty=true"
+
+            getdata.open("GET",urldata)
+            getdata.send();
+          
+            
+        }
+        function displayLastName(){
+            console.log("users insdide get data from 2nd Function",data)
+        }
+        getdatafromserver();
+        // displayLastName();
+
+    </script>
+    
+</body>
+</html>

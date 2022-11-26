@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th> UserId</th>
+                <th>Date</th>
+                <th>Products</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script src="./data1.js"></script>
+
+    <script>
+        var FilterProducts = [];
+        function myProducts(cart) {
+            document.querySelector("tbody").innerHTML="";
+            cart.forEach((cartItem, i) => {
+                // console.log(cart)
+                var mytr = document.createElement("tr")
+                for (a in cartItem) {
+
+                    var mytd = document.createElement("td")
+                    if (a !== "products" && a !== "__v" && a !== "date") {
+                        mytd.innerHTML = cartItem[a]
+                        mytr.appendChild(mytd)
+                    } else if (a == "products") {
+                        var prodtable = document.createElement("table");
+                        cartItem[a].forEach((item) => {
+                            var prodtr = document.createElement("tr")
+                            for (c in item) {
+                                var prodtd = document.createElement("td")
+                                prodtd.innerHTML = c + " :" + item[c];
+                                prodtr.appendChild(prodtd)
+                            }
+                            prodtable.appendChild(prodtr);
+                        })
+                        mytd.appendChild(prodtable);
+                        mytr.appendChild(mytd);
+                    }
+                    else if (a == "date") {
+                        mytd.innerHTML = new Date(cartItem[a]).toDateString();
+                        mytr.appendChild(mytd)
+
+                    }
+
+                }
+
+
+                var EditTd = document.createElement("td")
+                var EditBtn = document.createElement("button")
+                EditBtn.innerHTML = "EDIT"
+                EditTd.appendChild(EditBtn)
+                mytr.appendChild(EditTd)
+
+                var Deltd = document.createElement("td")
+                var Delbtn = document.createElement("button");
+             Delbtn.setAttribute("OnClick", "Deleteproducts(" + i + ")")
+                Delbtn.innerHTML = "Delete"
+                Deltd.appendChild(Delbtn)
+                mytr.appendChild(Deltd)
+
+                document.querySelector("tbody").appendChild(mytr)
+            });
+        }
+        function Deleteproducts(i) {
+            if (FilterProducts.length == 0) {
+                FilterProducts = cart.filter((user, index) => {
+                    return user.id !== cart[i].id;
+                });
+
+
+            } else {
+                FilterProducts = FilterProducts.filter((user, index) => {
+                    return user.id !== FilterProducts[i].id;
+                });
+
+
+            }
+
+           myProducts(FilterProducts)
+        }
+       myProducts(cart)
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #UpdateUserBtn{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <fieldset  style="background-color: darkblue;">
+        <div>
+            <h1>Bootstrap4 Form Validation Demo</h1>
+        </div>
+    </fieldset>
+        <form>
+            <fieldset>
+                <label for="">
+                    name:
+                    <br>
+                </label>
+                <br>
+                <input type="text" name="name" id="Name" style="width: 60%;" placeholder="Name">
+                <br>
+                <br>
+                <label for="">
+                    userName:
+                    <br>
+                </label>
+                <br>
+                
+                <input type="text" name="name" id="UserName" style="width: 60%;" placeholder="UserName">
+                <br>
+                <br>
+                <label for="">
+                    Email:
+                    <br>
+                </label>
+                <br>
+                <input type="text" name="name" id="Email" style="width: 60%;" placeholder="Email">
+                <br>
+                <br>
+                <label for="">
+                    password:
+                    <br>
+                </label>
+                <br>
+                <input type="text" name="name" id="password" style="width: 60%;" placeholder="Password">
+                <br>
+                <br>
+                <br>
+                <label for="">
+                    ConfirmPassword:
+                    <br>
+                </label>
+                <br>
+                <input type="text" name="name" id="confirmpassword" style="width: 60%;" placeholder="ConfirmPassword">
+                <br>
+                <br>
+                <label for="">
+                    Message:
+                    <br>
+                </label>
+                <br>
+                <input type="text" name="name" id="message" style="width: 60%; height: 10vh;" placeholder="message">
+                <br>
+                <br>
+                <button type="button" style="width: 70%; height: 4vh; background-color: blue;"  onclick="AddUser()" id="AddUserBtn"> Send</button>
+                <button type="button"   onclick="UpdateUser()" id="UpdateUserBtn"> Update</button>
+    
+               
+                
+            </fieldset>
+        </form>
+        <table border="2px">
+            <thead>
+                <tr>
+                    <th>fname</th>
+                    <th>lname</th>
+                    <th>Email</th>
+                    <th>password</th>
+                    <th>Confirmpassword</th>
+                    <th>Message</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            </tbody>
+    
+        </table>
+        <script src="./cre.js"></script>
+        <script src="./del.js"></script>
+        <script src="./red.js"></script>
+        <script src="./up.js"></script>
+    
+</body>
+</html>

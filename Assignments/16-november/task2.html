@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="2">
+        <thead>
+            <th>id</th>
+            <th>email</th>
+            <th>username</th>
+            <th>password</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+    </table>
+    <script>
+      
+        var Dummy = [
+            {
+                "id": 5159,
+                "email": "APepin@lacus.net",
+                "username": "DMoudry",
+                "password": "L4Vuv"
+            },
+            {
+                "id": 5160,
+                "email": "MSherstan@vestibulum.net",
+                "username": "SLeonard",
+                "password": "VYHBT"
+            },
+            {
+                "id": 5161,
+                "email": "BSmallwood@placerat.net",
+                "username": "FStroll",
+                "password": "m9rvL"
+            },
+            {
+                "id": 5162,
+                "email": "ABarrick@risus.com",
+                "username": "KAnastasiades",
+                "password": "BaVr5"
+            },
+            {
+                "id": 5163,
+                "email": "LMadjid@nunc.io",
+                "username": "HHatter",
+                "password": "dyb5V"
+            },
+            {
+                "id": 5164,
+                "email": "HSherman@quis.org",
+                "username": "ABashford",
+                "password": "561NA"
+            },
+            {
+                "id": 5165,
+                "email": "LDryden@sollicitudin.io",
+                "username": "ATaylor",
+                "password": "O39Iw"
+            },
+            {
+                "id": 5166,
+                "email": "GPachler@malesuada.net",
+                "username": "SPartin",
+                "password": "2RDNG"
+            },
+            {
+                "id": 5167,
+                "email": "LVoss@sapien.net",
+                "username": "JJoslin",
+                "password": "mOfPx"
+            },
+            {
+                "id": 5168,
+                "email": "VBurks@magna.net",
+                "username": "AKlapper",
+                "password": "lJKgx"
+            }
+        ]
+        var FilterDummy=[];
+      function displayDummy(Dummy){
+        document.querySelector("tbody").innerHTML="";
+        Dummy.forEach((user,i) => {      
+            var trow = document.createElement("tr");
+            for (a in user) {
+
+                var mydt = document.createElement("td");
+                mydt.innerHTML = user[a]
+                trow.appendChild(mydt);
+            }
+            var editTd = document.createElement("td")
+            var editbtn = document.createElement("button");
+            editbtn.innerHTML = "Edit"
+            editTd.appendChild(editbtn)
+            trow.appendChild(editTd)
+
+            var Deltd = document.createElement("td")
+            var Delbtn = document.createElement("button");
+          Delbtn.setAttribute("OnClick","DeleteDummy("+i+")")
+            Delbtn.innerHTML = "Delete"
+            Deltd.appendChild(Delbtn)
+            trow.appendChild(Deltd)
+
+            document.querySelector("tbody").appendChild(trow)
+        })
+      }
+        function DeleteDummy(i){
+            if(FilterDummy.length == 0) {
+                FilterDummy= Dummy.filter((user,index)=>{
+                    return user.id !== Dummy[i].id;
+                });
+           
+
+            } else {
+                FilterDummy=FilterDummy.filter((user,index)=>{
+                    return user.id !==  FilterDummy[i].id;
+                });
+               
+           
+            }
+                
+            displayDummy(FilterDummy)
+        }
+        displayDummy(Dummy);
+          
+
+
+    </script>
+
+</body>
+
+</html>
