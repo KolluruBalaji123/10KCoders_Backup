@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myname="Balaji"
+        var welcomeMessage="hii this is balaji welcome to my javascript . to the reactjs welcome"
+        console.log(welcomeMessage.length)
+        console.log(welcomeMessage.split(" "))
+        console.log(welcomeMessage.split(" ").join(" "))
+        console.log(welcomeMessage.split(" ").reverse(" "))// reverse and join are array methods
+        console.log(welcomeMessage.indexOf("welcome"))
+        console.log(welcomeMessage.lastIndexOf("welcome"))
+       var dotIndex=welcomeMessage.lastIndexOf(".")
+       console.log( "dotIndex",dotIndex)
+      console.log(welcomeMessage.substring(dotIndex+1,dotIndex+16))//need to give both index values
+      console.log(welcomeMessage.substr(dotIndex+1,14))//Need to  give one index value and no of chars required
+      console.log(welcomeMessage.slice(dotIndex+1,dotIndex+18))
+
+
+    </script>
+    
+</body>
+</html>

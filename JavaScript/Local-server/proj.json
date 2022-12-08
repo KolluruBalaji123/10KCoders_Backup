@@ -1,0 +1,33 @@
+{
+    "doctors":[
+        
+        {
+            "doctorname": "Walter White",
+      "position": "Chief Medical Officer",
+      "description": "Explicabo voluptatem mollitia et repellat qui dolorum quasi",
+    
+      "pic":"doctors-1"
+        },
+        {
+         "doctorname": "William Anderson",
+      "position": "Cardiology",
+      "description": "Explicabo voluptatem mollitia et repellat qui dolorum quasi",
+      "pic":"doctors-2"
+        },
+        {
+            "doctorname": "Sarah Jhonson",
+            "position": "Anesthesiologist",
+            "description": "Explicabo voluptatem mollitia et repellat qui dolorum quasi",
+            "pic":"doctors-3"
+
+        },
+        {
+            "doctorname": "Amanda Jepson",
+            "position": "Neurosurgeon",
+            "description": "Explicabo voluptatem mollitia et repellat qui dolorum quasi",
+            "pic":"doctors-4"
+
+        }
+       
+    ]
+}

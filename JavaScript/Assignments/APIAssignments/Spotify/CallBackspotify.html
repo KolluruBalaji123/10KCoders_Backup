@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul></ul>
+    <button type="button" onclick="getData()">GetData</button>
+    
+    <script>
+         var data=[];
+          var params = {id: '3IBcauSj5M2A6lTeffJzdv'};
+          function formatParams(params) {
+            return (
+                "?" +
+                Object.keys(params)
+                    .map(function (key) {
+                        return key + "=" + encodeURIComponent(params[key]);
+                    })
+                    .join("&")
+            );
+        }
+        console.log(formatParams(params));
+
+
+        function getData() {
+           
+            var getInfo = new XMLHttpRequest()
+            getInfo.onreadystatechange = function () {
+                if (getInfo.readyState == 4 && getInfo.status == 200) {
+                    console.log(JSON.parse(getInfo.response))
+                     data=JSON.parse(getInfo.response)
+                     DisplaySpotifyLists()
+                }
+            }
+            var spotify = 'https://spotify81.p.rapidapi.com/album_metadata'+formatParams(params);
+            getInfo.open("GET", spotify)
+            getInfo.setRequestHeader("X-RapidAPI-Key", "3452970f5dmsh595857851761f3cp1d7170jsn897f12cd5d63");
+            getInfo.setRequestHeader("X-RapidAPI-Host", "spotify81.p.rapidapi.com");
+            getInfo.send();
+        }
+        function DisplaySpotifyLists(){
+
+          
+    
+       
+
+
+        }
+      
+
+      
+    </script>
+    
+</body>
+</html>

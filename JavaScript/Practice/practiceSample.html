@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul></ul>
+    <button type="button" onclick="getData()">GetData</button>
+    
+    <script>
+         var data1=[];
+      
+
+
+        function getData() {
+           
+            var getInfo = new XMLHttpRequest()
+            getInfo.onreadystatechange = function () {
+                if (getInfo.readyState == 4 && getInfo.status == 200) {
+                    console.log(JSON.parse(getInfo.response))
+                     data1=JSON.parse(getInfo.response)
+                     DisplayBurgerLists()
+                }
+            }
+            var burgers = 'https://cricketapi21.p.rapidapi.com/api/cricket/search/kabul';
+            getInfo.open("GET", burgers)
+            getInfo.setRequestHeader("X-RapidAPI-Key", "3452970f5dmsh595857851761f3cp1d7170jsn897f12cd5d63");
+            getInfo.setRequestHeader("X-RapidAPI-Host", "cricketapi21.p.rapidapi.com");
+            getInfo.send();
+        }
+         function DisplayBurgerLists(){
+           data1.results.forEach((balu)=>{
+            for( a in balu){
+                var myli=document.createElement("li")
+                if(a!=="entity"){
+                    myli.innerHTML=balu[a]
+                document.querySelector("ul").appendChild(myli)
+
+                }else if(a=="entity"){
+                  var obj=balu[a]
+                    for(b in obj){
+                        if(b!=="country"&&b!=="sport"&&b!=="teamColors"){
+                        var myli=document.createElement("li")
+                      myli.innerHTML=obj[b]
+                      document.querySelector("ul").appendChild(myli)
+
+                        }else if(b=="sport"){
+                            var obj1=obj[b]
+                            for(c in obj1){
+                                var myli=document.createElement("li")
+                                myli.innerHTML=c+":"+obj1[c]
+                                document.querySelector("ul").appendChild(myli)
+
+
+                            }
+                        }else if(b=="teamColors"){
+                            var obj2=obj1[c]
+                            for(d in obj2){
+                                var myli=document.createElement("li")
+                                myli.innerHTML=obj2[d]
+                                document.querySelector("ul").appendChild(myli)
+                            }
+                        }
+                     
+                        
+                    }
+
+                }
+               
+            }
+          
+
+           })
+        }
+      
+
+      
+    </script>
+    
+    
+</body>
+</html>

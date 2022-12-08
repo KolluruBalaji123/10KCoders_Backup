@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container text-center">
+        <button onclick="gotoMainPage()" class="btn btn-secondary"> Go to MainPage</button>
+        <h2>Welcometo Edit/createPage</h2>
+        <div id="userdetails" class="container">
+            <form>
+                <div class="mb-3">
+                    <label for="" class="form-label">ID</label>
+                    <input type="text" class="form-control" disabled id="id">
+                  </div>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="username" class="form-label">UserName</label>
+                  <input type="text" class="form-control" id="username">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">phone</label>
+                  <input type="tel" class="form-control" id="phone">
+                </div>
+                <div class="mb-3">
+                    <label for="website" class="form-label">website</label>
+                    <input type="text" class="form-control" id="website">
+                  </div>
+               
+                <button type="button" class="btn btn-primary" onclick="UpdateUser()">Submit</button>
+              </form>
+        </div>
+
+    </div>
+    <script>
+        var mainuser={};
+        var id;
+
+        function gotoMainPage(){
+            window.location.href="Sample1.html"
+        }
+        var url=window.location.href;
+          console.log(url)
+          if(url.lastIndexOf("?")> -1){
+             id=url.substr(url.lastIndexOf("?")+1)
+          }else {
+             id=null
+          }
+          console.log(id)
+
+          fetch("http://localhost:3000/users/"+id)
+          .then((response)=>{
+            return response.json()
+          })
+          .then((user)=>{
+            mainuser = user
+            for(a in user){
+                if(a!=="address" && a!=="company"){
+                    document.getElementById(a).value=user[a]
+                }
+            }
+          
+          })
+        function gotoMainPage(){
+            window.location.href="Sample1.html" ;
+        }
+        function UpdateUser(){
+            if(id){
+                //call update function
+              fetch("http://localhost:3000/users/"+id,{
+                method:"PUT",
+                headers:{"Content-Type" :"application/json"},
+                body:JSON.stringify(capturedUser())
+            }).then((response)=>{
+                return response.json();
+            }).then(()=>{
+                window.location.href="Sample1.html"
+
+            })
+
+            }else{
+                fetch("http://localhost:3000/users/",{
+                method:"POST",
+                headers:{"Content-Type" :"application/json"},
+                body:JSON.stringify(capturedUser())
+            }).then((response)=>{
+                return response.json();
+            }).then(()=>{
+                window.location.href="Sample1.html"
+
+            })
+            }
+           
+            
+           
+        }
+        function capturedUser(){
+            var newUser={
+                id:"",
+                name:"",
+                username:"",
+                email:"",
+                // address:{},
+                phone:"",
+                website:"",
+                // company:{},
+
+            }
+            for( a in newUser){
+                if(a!=="company" && a!=="address"){
+                    newUser[a]=document.getElementById(a).value
+                }
+            }
+            return newUser
+        }
+        
+    </script>
+    
+</body>
+</html>

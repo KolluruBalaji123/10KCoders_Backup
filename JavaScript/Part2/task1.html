@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <h2>Using the Call-Back Function</h2>
+        <button onclick="getDataFromServer()">Game of Thrones</button>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Rank</th>
+                    <th>title</th>
+                    <th>Rating</th>
+                    <th>ID</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <script>
+             function getDataFromServer(){
+                var getdata= new XMLHttpRequest()
+                getdata.onreadystatechange = function () {
+                    if (getdata.readyState === 4 && getdata.status === 200) {
+                        data = JSON.parse(getdata.response)
+                        disaplayMoviedetails(data)
+                        console.log(data)
+                    }
+                
+                }
+                getdata.open("GET", 'https://imdb-top-100-movies.p.rapidapi.com/premiummovies' )
+                getdata.setRequestHeader('X-RapidAPI-Key', '3452970f5dmsh595857851761f3cp1d7170jsn897f12cd5d63')
+                getdata.setRequestHeader('X-RapidAPI-Host', 'imdb-top-100-movies.p.rapidapi.com')
+                getdata.send();
+                
+             }
+             function  disaplayMoviedetails(data){
+                data.forEach((movie)=>{
+                    var row = document.createElement("tr")
+                    for(a in movie){
+                        if( a!=="thumbnail"){
+                         var col=document.createElement("td")
+                        col.innerHTML=movie[a]
+                        var img=  document.createElement("img")
+                         img.setAttribute("src",movie[a])
+                          img.style.width="100px";
+                       col.appendChild(img)
+                        row.appendChild(col)
+
+                        }
+                       
+                    }
+                    document.querySelector("tbody").appendChild(row)
+                })
+                //2nd method
+            //    data.forEach((movie)=>{
+            //     var row = document.createElement("tr")
+            //     for(a in movie){
+            //         if(a!=="thumbnail" ){
+            //             var col=document.createElement("td")
+            //             col.innerHTML=movie[a]
+            //             row.appendChild(col)
+                      
+
+
+            //         }else if(a=="image"){
+            //      var myImage=document.createElement("img");
+            //        myImage.setAttribute("src",movie[a])
+            //        myImage.style.width="100px";
+        
+            //        col.appendChild(myImage);
+            //        row.appendChild(col)
+            //         }
+                   
+            //     }
+
+            //    })
+             }
+
+        </script>
+    </fieldset>
+
+    <!-- Using promise Method -->
+    <fieldset>
+        <h2>Using The Promise Method</h2>
+        <button onclick="gettheMoviedetails()">Game of Thrones</button>
+        <ol></ol>
+        <script>
+             function getDataServer(){
+                return new Promise((resolve,reject)=>{
+                    var getdata = new XMLHttpRequest();
+                    getdata.onreadystatechange = function () {
+                        if (getdata.readyState === 4 && getdata.status === 200) {
+                            data = JSON.parse(getdata.response)
+                            resolve(data)
+                        }
+                    };
+                 getdata.open("GET", 'https://imdb-top-100-movies.p.rapidapi.com/premiummovies' )
+                getdata.setRequestHeader('X-RapidAPI-Key', '3452970f5dmsh595857851761f3cp1d7170jsn897f12cd5d63')
+                getdata.setRequestHeader('X-RapidAPI-Host', 'imdb-top-100-movies.p.rapidapi.com')
+                getdata.send();
+
+                })
+
+             }
+             function gettheMoviedetails(){
+                getDataServer().then((data)=>{
+                    // data.forEach((movie)=>{
+                    // for(a in movie){
+                    //     var MyLi = document.createElement('li');
+                    //     MyLi.innerHTML=a+":"+movie[a]
+                    //     document.querySelector("ol").appendChild(MyLi);
+
+
+                    // }
+
+                    // })
+                    data.forEach((move)=>{
+                        var MyLi = document.createElement('li');
+                        MyLi.innerHTML=move.title +","+"id:"+move.id
+                        document.querySelector("ol").appendChild(MyLi);
+
+                    })
+
+                })
+
+
+             }
+        </script>
+    </fieldset>
+    <!-- using AsyncAwait -->
+    <fieldset>
+        <h2>Async & Await</h2>
+        <ul></ul>
+        <button onclick="movieDetails()">GetDta</button>
+        <script>
+              function getfromServer(){
+                return new Promise((resolve, reject) => {
+                    var getdata = new XMLHttpRequest();
+                  
+                    getdata.onreadystatechange = function () {
+                        if (getdata.readyState == 4 && getdata.status == 200) {
+                            resolve(JSON.parse(getdata.response))
+                        }
+                    }
+                 getdata.open("GET", 'https://imdb-top-100-movies.p.rapidapi.com/premiummovies' )
+                getdata.setRequestHeader('X-RapidAPI-Key', '3452970f5dmsh595857851761f3cp1d7170jsn897f12cd5d63')
+                getdata.setRequestHeader('X-RapidAPI-Host', 'imdb-top-100-movies.p.rapidapi.com')
+                getdata.send();
+
+              })
+
+
+            }
+            function movieDetails(){
+               async  function asyncData(){
+                var mycode= await getfromServer();
+                console.log(mycode)
+                try {
+                    mycode.forEach((thrones)=>{
+                        var MyLi = document.createElement('li');
+                        MyLi.innerHTML=thrones.title
+                        document.querySelector("ul").appendChild(MyLi);
+
+
+                    })
+                    
+
+                } catch (error) {
+                    console.log("there is some issue with code please do it again")
+                    
+                }
+
+
+                }
+                asyncData();
+
+            }
+
+        </script>
+    </fieldset>
+
+    
+</body>
+</html>

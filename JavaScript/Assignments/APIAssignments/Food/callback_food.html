@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul></ul>
+    <button type="button" onclick="getData()">GetData</button>
+    
+    <script>
+         var data1=[];
+      
+
+
+        function getData() {
+           
+            var getInfo = new XMLHttpRequest()
+            getInfo.onreadystatechange = function () {
+                if (getInfo.readyState == 4 && getInfo.status == 200) {
+                    console.log(JSON.parse(getInfo.response))
+                     data1=JSON.parse(getInfo.response)
+                     DisplayBurgerLists()
+                }
+            }
+            var burgers = 'https://burgers1.p.rapidapi.com/burgers';
+            getInfo.open("GET", burgers)
+            getInfo.setRequestHeader("X-RapidAPI-Key", "3452970f5dmsh595857851761f3cp1d7170jsn897f12cd5d63");
+            getInfo.setRequestHeader("X-RapidAPI-Host", "burgers1.p.rapidapi.com");
+            getInfo.send();
+        }
+         function DisplayBurgerLists(){
+        data1.forEach((food)=>{
+            for( a in food){
+                if(a!=="addresses"){
+                    var myli=document.createElement("li")
+                myli.innerHTML=a+":"+food[a];
+                document.querySelector("ul").appendChild(myli)
+
+
+                }else if(a =="addresses"){
+                food[a].forEach((addres)=>{
+                    for(b in addres){
+                        var myli=document.createElement("li")
+                        myli.innerHTML=b+":"+addres[b]
+                        document.querySelector("ul").appendChild(myli)
+
+                    }
+                })
+                 
+                    
+                }
+                
+            }
+        })
+
+
+        }
+      
+
+      
+    </script>
+    
+    
+</body>
+</html>

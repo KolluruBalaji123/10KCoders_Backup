@@ -1,0 +1,112 @@
+{
+  "doctors": [
+    {
+      "doctorname": "Walter White",
+      "position": "Chief Medical Officer",
+      "description": "Explicabo voluptatem mollitia et repellat qui dolorum quasi",
+      "pic": "doctors-1",
+      "socialIcons": [
+        "ri-twitter-fill",
+        "ri-facebook-fill",
+        "ri-instagram-fill",
+        "ri-linkedin-box-fill"
+      ]
+    },
+    {
+      "doctorname": "William Anderson",
+      "position": "Cardiology",
+      "description": "Explicabo voluptatem mollitia et repellat qui dolorum quasi",
+      "pic": "doctors-2",
+      "socialIcons": [
+        "ri-twitter-fill",
+        "ri-facebook-fill",
+        "ri-instagram-fill",
+        "ri-linkedin-box-fill"
+      ]
+    },
+    {
+      "doctorname": "Sarah Jhonson",
+      "position": "Anesthesiologist",
+      "description": "Explicabo voluptatem mollitia et repellat qui dolorum quasi",
+      "pic": "doctors-3",
+      "socialIcons": [
+        "ri-twitter-fill",
+        "ri-facebook-fill",
+        "ri-instagram-fill",
+        "ri-linkedin-box-fill"
+      ]
+    },
+    {
+      "doctorname": "Amanda Jepson",
+      "position": "Neurosurgeon",
+      "description": "Explicabo voluptatem mollitia et repellat qui dolorum quasi",
+      "pic": "doctors-4",
+      "socialIcons": [
+        "ri-twitter-fill",
+        "ri-facebook-fill",
+        "ri-instagram-fill",
+        "ri-linkedin-box-fill"
+      ]
+    },
+    {
+      "doctorname": "Walter White",
+      "position": "Chief Medical Officer",
+      "description": "Explicabo voluptatem mollitia et repellat qui dolorum quasi",
+      "pic": "doctors-1",
+      "socialIcons": [
+        "ri-twitter-fill",
+        "ri-facebook-fill",
+        "ri-instagram-fill",
+        "ri-linkedin-box-fill"
+      ]
+    },
+    {
+      "doctorname": "William Anderson",
+      "position": "Cardiology",
+      "description": "Explicabo voluptatem mollitia et repellat qui dolorum quasi",
+      "pic": "doctors-2",
+      "socialIcons": [
+        "ri-twitter-fill",
+        "ri-facebook-fill",
+        "ri-instagram-fill",
+        "ri-linkedin-box-fill"
+      ]
+    },
+    {
+      "doctorname": "Sarah Jhonson",
+      "position": "Anesthesiologist",
+      "description": "Explicabo voluptatem mollitia et repellat qui dolorum quasi",
+      "pic": "doctors-3",
+      "socialIcons": [
+        "ri-twitter-fill",
+        "ri-facebook-fill",
+        "ri-instagram-fill",
+        "ri-linkedin-box-fill"
+      ]
+    },
+    {
+      "doctorname": "Amanda Jepson",
+      "position": "Neurosurgeon",
+      "description": "Explicabo voluptatem mollitia et repellat qui dolorum quasi",
+      "pic": "doctors-4",
+      "socialIcons": [
+        "ri-twitter-fill",
+        "ri-facebook-fill",
+        "ri-instagram-fill",
+        "ri-linkedin-box-fill"
+      ]
+    }
+  ],
+  "appointments": [
+    {
+      "name": "Ramesh",
+      "email": "murali@gmail.com",
+      "phone": "9663856625",
+      "date": "12/12/22",
+      "doctor": "Doctor 2",
+      "department": "Department 2",
+      "description": "Some Appointments ",
+      "id": 1
+    }
+  ]
+}
