@@ -1,10 +1,15 @@
 
-import { MainClassComponent } from './Components/MainClassComp';
+import Employee from './Components/Employee';
+import ParentComponent from './Components/ParentComp';
+
 
 function App() {
   return (
     <div className="App">
-      <MainClassComponent/>
+      {/* <MainClassComponent/> */}
+      {/* <Students/> */}
+      {/* <Employee/> */}
+      <ParentComponent/>
     
     </div>
   );

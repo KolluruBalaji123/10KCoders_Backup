@@ -31,8 +31,8 @@ export class MainClassComponent extends Component{
     <ul>
         {/* <li>{this.state.friends[0]}</li>
         <li>{this.state.friends[1]}</li> */}
-        {this.state.friends.map((val)=>{
-            return <li>{val}</li>
+        {this.state.friends.map((val,i)=>{
+            return <li key={i}>{val}</li>
         })}
     </ul>
         </>
