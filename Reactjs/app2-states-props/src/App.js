@@ -1,5 +1,5 @@
 
-import Employee from './Components/Employee';
+
 import ParentComponent from './Components/ParentComp';
 
 
