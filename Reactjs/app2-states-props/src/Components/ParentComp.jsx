@@ -11,13 +11,23 @@ class ParentComponent extends Component{
                 email:"kolluru@123.com",
                 city:"Bangalore"
             }
-        }
+        };
+    //     this.changeMessage=this.changeMessage.bind(this) one method
+     }
+    // changeMessage (){
+    //     this.setState({welComeMessage:"helloparent comp i am Changing you"})
+    // }
+    changeMessage=()=>{
+        this.setState({welComeMessage:"helloparent comp i am Changing you"})
+
     }
+
     render(){
+        const {welComeMessage}=this.state// dstructuring
         return <div>
             <h2>Welcome to ParentComponent</h2>
           {/* <Header {...this.state}/> */}
-          <Header message={this.state.welComeMessage}/>
+          <Header message={welComeMessage} handleChange={this.changeMessage}/>
         </div>
     }
 }
