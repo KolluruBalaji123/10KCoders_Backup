@@ -69,7 +69,7 @@ class Address extends Component {
 
   }
   deleteUser=(addr)=>{
-    console.log(addr)
+    // console.log(addr)
     var latestAddress=this.state.allAddress.filter((myaddress)=> myaddress.city !==addr.city)
     this.setState({allAddress:latestAddress})
 
