@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr1=[0,0,-1,-2,,-3,1,1,3,3,4,-5,5];
+    var arry2 =  new Set (arr1);
+   
+    arry2.forEach((ele2,index2)=>{
+        var count=0;
+        arr1.forEach((ele,index)=>{
+            if(ele2==ele){
+                count++
+            }
+        })
+        console.log(ele2+"is"+count+"times")
+    })
+    
+    
+        </script>
+    
+</body>
+</html>

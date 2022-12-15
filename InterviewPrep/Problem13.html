@@ -1,0 +1,33 @@
+<!-- Create a function that takes an array of numbers and returns the second largest number.
+Example:
+secondLargest([10, 40, 30, 20, 50]) ➞ 40 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function getSecondLargest(nums) {
+  var largest = nums[0];
+  var large;
+  for (let i = 1; i < nums.length; ++i) {
+    if (nums[i] > largest) {
+        large = largest;
+        largest = nums[i];
+    } else if (nums[i] > large || typeof large === 'undefined') {
+        large = nums[i]
+    }
+  }
+  return large;
+}
+var num=(getSecondLargest([10, 40, 30, 20, 50]))
+document.write(num)
+    </script>
+    
+</body>
+</html>
