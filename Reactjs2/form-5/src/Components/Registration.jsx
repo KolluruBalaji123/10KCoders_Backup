@@ -38,7 +38,7 @@ export default class Registration extends Component {
   addCollege = () => {
     var latestCollege = [...this.state.AllColleges];
     latestCollege.push(this.state.college);
-    console.log(this.state.college);
+    // console.log(this.state.college);
     this.setState({ AllColleges: latestCollege });
     this.clearForm();
   };
