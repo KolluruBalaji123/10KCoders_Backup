@@ -1,14 +1,12 @@
 
 import './App.css';
-import Form6 from './Components/Form5';
-
+import LifeCycleA from './Components/LifeCycleA';
 
 function App() {
   return (
     <div className="App">
-  <Form6/>
-  
-   
+    <LifeCycleA/>
+     
     </div>
   );
 }

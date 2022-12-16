@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-export default class Form6 extends Component {
+export default class Form7 extends Component {
   constructor() {
     super();
     this.state = {
