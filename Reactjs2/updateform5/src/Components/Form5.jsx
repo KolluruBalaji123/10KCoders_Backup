@@ -16,7 +16,20 @@ export default class Form7 extends Component {
         Height: "",
         Weight: "",
       },
-      allBio:[],
+      allBio:[
+        {
+          username: "Balji",
+          password: "balu",
+          EmailAddress: "balu@",
+          Man: "",
+          Women: "",
+          Dates: "",
+          Month: "",
+          Year: "",
+          Height: "",
+          Weight: "",
+        }
+      ],
       editIndex:null
     };
   }
