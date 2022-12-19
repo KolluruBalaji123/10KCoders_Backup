@@ -34,6 +34,15 @@
       "state": "Ap",
       "zipcode": 522324,
       "country": "pakistan"
+    },
+    {
+      "id": 2,
+      "street": "1-128 NEAR SRINIVASA HALL KOLLURU, SAME AS FIRST ADRESS",
+      "empty": "balu",
+      "city": "pakistan",
+      "state": "Andhra Pradesh",
+      "zipcode": "522324",
+      "country": "pakistan"
     }
   ],
   "person": [
@@ -52,14 +61,6 @@
       "dateofBirth": "",
       "EmailId": "kollurubalaji7@gmail.com",
       "MobileNumber": "09182037594"
-    },
-    {
-      "id": 4,
-      "firstname": "Balaji3",
-      "lastname": "KOLLURU",
-      "dateofBirth": "",
-      "EmailId": "kollurubalaji7@gmail.com",
-      "MobileNumber": "09182037594"
     }
   ],
   "Registrations": [
@@ -73,6 +74,17 @@
       "Average": "50",
       "Experience": "3",
       "website": "www.balaji.com"
+    },
+    {
+      "id": 2,
+      "university": "Ram",
+      "institute": "sam",
+      "Branch": "Electrical",
+      "Degree": "B.Tech",
+      "statusc": "Completed",
+      "Average": "99",
+      "Experience": "4",
+      "website": "blog.com"
     }
   ]
 }
