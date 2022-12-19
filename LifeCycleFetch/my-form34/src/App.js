@@ -1,6 +1,6 @@
 
 import './App.css';
-import Form4 from './Components/Registration';
+import Form4 from './Components/Registration4';
 // import Person from './Components/person';
 
 function App() {
