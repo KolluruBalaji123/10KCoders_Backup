@@ -82,6 +82,28 @@
       "Average": "50",
       "Experience": "3",
       "website": "www.balaji.com"
+    },
+    {
+      "id": 2,
+      "university": "Ram",
+      "institute": "",
+      "Branch": "",
+      "Degree": "",
+      "statusc": "",
+      "Average": "",
+      "Experience": "",
+      "website": ""
+    },
+    {
+      "id": 3,
+      "university": "balu",
+      "institute": "chaiatanya",
+      "Branch": "Electrical",
+      "Degree": "B.Tech",
+      "statusc": "Completed",
+      "Average": "99",
+      "Experience": "10",
+      "website": "blog.com"
     }
   ],
   "Bio": [
