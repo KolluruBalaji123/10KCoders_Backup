@@ -22,7 +22,15 @@
       "username": "Balajikolluru ",
       "email": "kollurubalaji10@gmail.com",
       "password": "12345",
-      "confirmpassword": "baalhgig"
+      "confirmpassword": "babai"
+    },
+    {
+      "id": 4,
+      "fullname": "ntr",
+      "username": "kolluru.balaji@jktech.com",
+      "email": "kollurubalaji10@gmail.com",
+      "password": "babau",
+      "confirmpassword": ""
     }
   ],
   "Address": [
@@ -33,29 +41,30 @@
       "city": "Guntur",
       "state": "Ap",
       "zipcode": 522324,
-      "country": "pakistan"
+      "country": "India"
+    },
+    {
+      "id": 2,
+      "street": "1-128 NEAR SRINIVASA HALL KOLLURU, SAME AS FIRST ADRESS",
+      "empty": "balu",
+      "city": "Guntur",
+      "state": "Andhra Pradesh",
+      "zipcode": "522324",
+      "country": "India"
     }
   ],
   "person": [
-    {
-      "id": 2,
-      "firstname": "Billa",
-      "lastname": "KOLLURU",
-      "dateofBirth": "2022-12-19",
-      "EmailId": "kollurubalaji7@gmail.com",
-      "MobileNumber": "0918203"
-    },
     {
       "id": 3,
       "firstname": "BALAJI2",
       "lastname": "KOLLURU",
       "dateofBirth": "",
       "EmailId": "kollurubalaji7@gmail.com",
-      "MobileNumber": "09182037594"
+      "MobileNumber": "12345"
     },
     {
       "id": 4,
-      "firstname": "Balaji3",
+      "firstname": "BALAJI",
       "lastname": "KOLLURU",
       "dateofBirth": "",
       "EmailId": "kollurubalaji7@gmail.com",
