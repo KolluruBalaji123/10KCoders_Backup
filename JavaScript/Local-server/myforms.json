@@ -1,28 +1,12 @@
 {
   "users": [
     {
-      "id": 1,
-      "fullname": "Balaji",
-      "username": "Balaji Kolluru",
-      "email": "balaji@gmail.com",
-      "password": "12345",
-      "confirmpassword": "91820"
-    },
-    {
-      "id": 2,
-      "fullname": "ramu",
-      "username": "Balajikolluru ",
-      "email": "kollurubalaji7@gmail.com",
-      "password": "12345",
-      "confirmpassword": "vsch"
-    },
-    {
       "id": 3,
       "fullname": "ramu",
-      "username": "Balajikolluru ",
+      "username": "ramu klanumuru",
       "email": "kollurubalaji10@gmail.com",
       "password": "12345",
-      "confirmpassword": "babai"
+      "confirmpassword": "mohan"
     },
     {
       "id": 4,
@@ -30,7 +14,23 @@
       "username": "kolluru.balaji@jktech.com",
       "email": "kollurubalaji10@gmail.com",
       "password": "babau",
-      "confirmpassword": ""
+      "confirmpassword": "babi"
+    },
+    {
+      "id": 5,
+      "fullname": "ntr",
+      "username": "kolluru.balaji@jktech.com",
+      "email": "kollurubalaji10@gmail.com",
+      "password": "babu",
+      "confirmpassword": "babau"
+    },
+    {
+      "id": 6,
+      "fullname": "sidda",
+      "username": "Mohan",
+      "email": "kollurubalaji7@gmail.com",
+      "password": "ntrntr",
+      "confirmpassword": "babi"
     }
   ],
   "Address": [
