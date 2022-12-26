@@ -4,7 +4,7 @@ import { useNavigate} from "react-router-dom"
 import UserForm from "./UserForm";
 
 const CreatePerson = () => {
-  const navigate=useNavigate();
+  const navigate =useNavigate();
   const [Person, setPersons] = useState({
     id: "",
     firstname: "",
