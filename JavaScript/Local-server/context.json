@@ -1,0 +1,37 @@
+{
+    "users":[
+        {
+            "id": 3,
+            "fullname": "ramu",
+            "username": "ramu klanumuru",
+            "email": "kollurubalaji10@gmail.com",
+            "password": "12345",
+            "confirmpassword": "mohan"
+          },
+          {
+            "id": 4,
+            "fullname": "ntr",
+            "username": "kolluru.balaji@jktech.com",
+            "email": "kollurubalaji10@gmail.com",
+            "password": "babau",
+            "confirmpassword": "babi"
+          },
+          {
+            "id": 5,
+            "fullname": "ntr",
+            "username": "kolluru.balaji@jktech.com",
+            "email": "kollurubalaji10@gmail.com",
+            "password": "babu",
+            "confirmpassword": "babau"
+          },
+          {
+            "id": 6,
+            "fullname": "sidda",
+            "username": "Mohan",
+            "email": "kollurubalaji7@gmail.com",
+            "password": "ntrntr",
+            "confirmpassword": "babi"
+          }
+
+    ]
+}

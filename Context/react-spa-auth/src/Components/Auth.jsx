@@ -7,7 +7,7 @@ export const AuthProvider=({children})=>{
     const [user,setUser]=useState(null);
     const login=(user)=>{
 
-        setUser()
+        setUser(user)
     };
     const logout=()=>{
         setUser(null)
