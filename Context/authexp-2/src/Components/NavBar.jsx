@@ -3,8 +3,8 @@ import {Link} from "react-router-dom"
 import { useAuth } from './Auth'
 
 const NavBar = () => {
-    const{user}=useAuth();
-    console.log(user)// 1hr 05 mins  iwas stopped
+    const{user,login}=useAuth();
+    console.log(user)
 
   return (
     <div>
@@ -13,7 +13,7 @@ const NavBar = () => {
       {/* <a className="navbar-brand" href="#">
       Second Form Application
       </a> */}
-      <Link className="navbar-brand" to={'/'}>ThirdForm</Link>
+      <Link className="navbar-brand" to={'/'}>user</Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -27,10 +27,13 @@ const NavBar = () => {
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
-          <li className="nav-item">
-          {/* <Link to={"create"} className="nav-link">CreateAddress</Link> */}
+        {user ? <li className='nav-link'>Logout</li>: <li className='nav-link'>Login</li>}
+       
+     
+          {/* <li className="nav-item">
+        
           <Link to={"/login"} className="nav-link">Login</Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

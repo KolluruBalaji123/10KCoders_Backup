@@ -22,7 +22,7 @@ const LoginComp = () => {
     <button type='button' className='btn btn-primary' onClick={handleLogin}>Login</button>
 
     </form>
-   <p style={{color:"red"}}>plaese login to view the products</p>
+  
 
     </div>
   )
