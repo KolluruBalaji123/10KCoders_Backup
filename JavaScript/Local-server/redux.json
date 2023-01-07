@@ -1,0 +1,20 @@
+{
+    "users":[
+        {
+            "id": 3,
+            "fullname": "ramu",
+            "username": "ramu klanumuru",
+            "email": "kollurubalaji10@gmail.com",
+            "password": "12345",
+            "confirmpassword": "mohan"
+          },
+          {
+            "id": 4,
+            "fullname": "ntr",
+            "username": "kolluru.balaji@jktech.com",
+            "email": "kollurubalaji10@gmail.com",
+            "password": "babau",
+            "confirmpassword": "babi"
+          }
+    ]
+}

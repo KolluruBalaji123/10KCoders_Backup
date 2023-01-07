@@ -1,0 +1,12 @@
+after creating redux 
+first create a store folder in src
+create a index.js in the store foldewr
+after craete reducer folder in store
+ after create a usersReducerfile  in Reducers folder
+ ------
+ after we have to create usersReducers arrowfunction  in that we have to provide switch statement
+ we have to declare case and return state in switch statement
+ for these switch statememt we ahve to create  defaulatestate .js in Reducers Folder
+ fter creating file we should create expoet  default state and users[]
+ and next goto index.jsin Store we should configure store  and provide object inside we have gibve the format of reducer:usersReducer
+ after give index.js in application to give provider access the store over there

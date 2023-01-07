@@ -10,6 +10,7 @@ const defaultSatate={
     email:"kollurubalaji10@gmail.com"
    }],
     products:[],
+    books:[],
   
    }
  export const usersReducer =(state = defaultSatate, action)=>{
@@ -70,6 +71,6 @@ default:
    export const rootReducer=combineReducers({
     users:usersReducer,
     persons:personsReducer,
-   products: personsReducer,
+   products: productsReducer,
    books:booksReducer
    })
