@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addUserAction, deleteUserAction, UpdateUserAction } from '../Store/Actions/userActions'
+import { addUserAction, deleteUserAction, getUsersAsyncAction, UpdateUserAction } from '../Store/Actions/userActions'
 import {connect} from "react-redux"
 
  class UsersClassComp extends Component {
@@ -49,6 +49,10 @@ import {connect} from "react-redux"
    handleUpdate=(user)=>{
     this.props.updateUser(this.state.user)
     this.clearForm();
+
+   }
+   componentDidMount(){
+    this.props.getUsers();
 
    }
   
@@ -109,7 +113,8 @@ function MapDipsatchToProps(dispatch){
     return{
         addUser:(user)=>dispatch(addUserAction(user)),
         deleteUser:(user)=>dispatch(deleteUserAction(user)),
-        updateUser:(user)=>dispatch(UpdateUserAction(user))
+        updateUser:(user)=>dispatch(UpdateUserAction(user)),
+        getUsers:()=>dispatch(getUsersAsyncAction())
 
     }
 }

@@ -1,0 +1,25 @@
+{
+    "newusers":[
+        {
+            "fname":"Balaji",
+            "lname":"kolluru",
+            "id":1,
+            "email":"kollurubalaji10@gmail.com"
+
+        },
+        {
+            "fname":"Balaji1",
+            "lname":"kolluru1",
+            "id":2,
+            "email":"kollurubalaji1@gmail.com"
+
+        },
+        {
+            "fname":"Balaji2",
+            "lname":"kolluru2",
+            "id":3,
+            "email":"kollurubalaji4@gmail.com"
+
+        }
+    ]
+}

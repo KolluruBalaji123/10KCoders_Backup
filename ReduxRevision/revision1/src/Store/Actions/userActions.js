@@ -1,5 +1,14 @@
-import { ADD_USER, DELETE_USER, UPDATE_USER } from "./ActionTypes"
+import { ADD_USER, DELETE_USER, GET_USERS, UPDATE_USER } from "./ActionTypes"
+import axios from "axios"
+export const getUsersAsyncAction=()=>{
+    axios.get(" http://localhost:3201/newusers").then((response)=>{
+        return {
+            type:GET_USERS,
+            payload:response
+        }
+    })
 
+}
 export const addUserAction=(user)=>{
     return{
         type:ADD_USER,
