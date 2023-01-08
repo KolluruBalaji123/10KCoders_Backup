@@ -1,7 +1,7 @@
 {
   "newusers": [
     {
-      "fname": "Balaji",
+      "fname": "bablu",
       "lname": "kolluru",
       "id": 1,
       "email": "kollurubalaji10@gmail.com"
@@ -13,16 +13,10 @@
       "email": "kollurubalaji1@gmail.com"
     },
     {
-      "fname": "BALAJI2",
+      "fname": "BALAJI4",
       "lname": "KOLLURU",
-      "email": "kollurubalaji0@gmail.com",
+      "email": "kollurubalaji11@gmail.com",
       "id": 3
-    },
-    {
-      "fname": "malla",
-      "lname": "KOLLURU",
-      "email": "kollurubalaji10@gmail.com",
-      "id": 4
     }
   ]
 }
