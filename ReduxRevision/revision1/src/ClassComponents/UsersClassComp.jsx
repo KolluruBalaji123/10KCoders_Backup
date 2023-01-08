@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addUserAction, deleteUserAction, getUsersAsyncAction, UpdateUserAction } from '../Store/Actions/userActions'
+import { addUserAction, addUserAsyncAction, deleteUserAction, deleteUserAsyncAction, getUsersAsyncAction, UpdateUserAction, UpdateUserAsyncAction } from '../Store/Actions/userActions'
 import {connect} from "react-redux"
 
  class UsersClassComp extends Component {
@@ -23,7 +23,8 @@ import {connect} from "react-redux"
 
     }
     handleSubmit=()=>{
-       this.props.addUser(this.state.user)
+      //  this.props.addUser(this.state.user)
+      this.props.adduserAsync(this.state.user)
        this.clearForm();
 
 
@@ -39,7 +40,9 @@ import {connect} from "react-redux"
         })
     }
     handleDelete=(user)=>{
-        this.props.deleteUser(user)
+
+        // this.props.deleteUser(user)
+        this.props.deleteUserAsync(user)
 
     }
    handleEdit=(user)=>{
@@ -47,7 +50,8 @@ import {connect} from "react-redux"
 
    }
    handleUpdate=(user)=>{
-    this.props.updateUser(this.state.user)
+    // this.props.updateUser(this.state.user)
+    this.props.updateUserAsync(this.state.user)
     this.clearForm();
 
    }
@@ -114,7 +118,10 @@ function MapDipsatchToProps(dispatch){
         addUser:(user)=>dispatch(addUserAction(user)),
         deleteUser:(user)=>dispatch(deleteUserAction(user)),
         updateUser:(user)=>dispatch(UpdateUserAction(user)),
-        getUsers:()=>dispatch(getUsersAsyncAction())
+        getUsers:()=>dispatch(getUsersAsyncAction()),
+        adduserAsync:(user)=>dispatch(addUserAsyncAction(user)),
+        deleteUserAsync :(user)=>dispatch(deleteUserAsyncAction(user)),
+        updateUserAsync :(user)=>dispatch(UpdateUserAsyncAction(user))
 
     }
 }

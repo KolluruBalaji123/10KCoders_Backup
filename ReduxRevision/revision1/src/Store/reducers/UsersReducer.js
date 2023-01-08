@@ -1,8 +1,10 @@
-import { ADD_USER, DELETE_USER, UPDATE_USER } from "../Actions/ActionTypes"
+import { ADD_USER, DELETE_USER, GET_USERS, UPDATE_USER } from "../Actions/ActionTypes"
 import { defaultState } from "./defaultstate"
 
 export const usersReducer=(state=defaultState, action)=>{
     switch(action.type){
+        case GET_USERS:
+            return {...state,users:action.payload};
         case ADD_USER:
             const newUsers=[...state.users]
             newUsers.push(action.payload)

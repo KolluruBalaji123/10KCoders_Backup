@@ -1,25 +1,28 @@
 {
-    "newusers":[
-        {
-            "fname":"Balaji",
-            "lname":"kolluru",
-            "id":1,
-            "email":"kollurubalaji10@gmail.com"
-
-        },
-        {
-            "fname":"Balaji1",
-            "lname":"kolluru1",
-            "id":2,
-            "email":"kollurubalaji1@gmail.com"
-
-        },
-        {
-            "fname":"Balaji2",
-            "lname":"kolluru2",
-            "id":3,
-            "email":"kollurubalaji4@gmail.com"
-
-        }
-    ]
+  "newusers": [
+    {
+      "fname": "Balaji",
+      "lname": "kolluru",
+      "id": 1,
+      "email": "kollurubalaji10@gmail.com"
+    },
+    {
+      "fname": "Balaji1",
+      "lname": "kolluru1",
+      "id": 2,
+      "email": "kollurubalaji1@gmail.com"
+    },
+    {
+      "fname": "BALAJI2",
+      "lname": "KOLLURU",
+      "email": "kollurubalaji0@gmail.com",
+      "id": 3
+    },
+    {
+      "fname": "malla",
+      "lname": "KOLLURU",
+      "email": "kollurubalaji10@gmail.com",
+      "id": 4
+    }
+  ]
 }
