@@ -10,12 +10,11 @@
     <!-- Create a function that takes a string and returns the number (count) of vowels contained within it.
  -->
  <script>
-    const myfunction=()=>{
-        String1=["a","e","i","o","u"]
-        count=0;
-        for(i=0;i<String1.length;i++)
-
+    const myfunction=(str)=>{
+        return str.replace(/[^aeiou]/gmi,"").length
+       
     }
+    console.log(myfunction("celebration"))
  </script>
     
 </body>

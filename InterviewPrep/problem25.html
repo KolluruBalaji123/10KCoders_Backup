@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // . C Program to Calculate the Power of a Number(using loop only).
+        
+		// 	Input: n=5, p=3
+		// 	Output: 5 ^ 3 = 125
+		// 	Explanation: 5 x 5 x 5 = 125
+
+
+
+    //   let n=5; p=3
+    //   var multiply = 5
+    //     var power = 3;
+    //     var result = 5;
+    //     for (var i = 1; i < power; i++) {
+    //         result = result * multiply
+    //     }
+    //     console.log(result)
+    const power=(n,p)=>{
+        if(p===0)
+        return 1
+        let result=1
+        while(p!=0)
+        {
+            p--
+            result*=n
+
+        }
+        return result
+
+
+    }
+    console.log(power(5,3))
+
+    </script>
+    
+</body>
+</html>
